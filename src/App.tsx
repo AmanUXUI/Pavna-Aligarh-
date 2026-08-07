@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ResultHighlights } from './components/ResultHighlights';
+import { FacultyPage } from './components/FacultyPage';
 import { LoginModal } from './components/LoginModal';
 import { SearchModal } from './components/SearchModal';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<string>('assessment-policy');
+  const [activeTab, setActiveTab] = useState<string>('home');
   const [isLoginOpen, setIsLoginOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
 
@@ -23,11 +24,17 @@ export default function App() {
 
       {/* Main Page Body */}
       <main className="flex-grow">
-        {/* Exact Hero Section from Screenshot */}
-        <Hero />
+        {activeTab === 'faculty' ? (
+          <FacultyPage />
+        ) : (
+          <>
+            {/* Hero Section */}
+            <Hero />
 
-        {/* Tabbed Result Highlights Section */}
-        <ResultHighlights activeTab={activeTab} setActiveTab={setActiveTab} />
+            {/* Tabbed Result Highlights Section */}
+            <ResultHighlights activeTab={activeTab} setActiveTab={setActiveTab} />
+          </>
+        )}
       </main>
 
       {/* Login Portal Modal */}

@@ -13,14 +13,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenLogin, activeTab, setActiv
 
   const navLinks = [
     { label: "Home", id: "home" },
-    { label: "About Us", id: "about" },
-    { label: "Academics", id: "academics" },
     { label: "Student Results", id: "student-results" },
-    { label: "Beyond Academics", id: "beyond" },
-    { label: "Infrastructure", id: "infrastructure" },
-    { label: "Admission", id: "admission" },
-    { label: "Contact Us", id: "contact" },
-    { label: "Our Alumni", id: "alumni" }
+    { label: "Faculty", id: "faculty" }
   ];
 
   const handleNavClick = (id: string) => {
