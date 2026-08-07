@@ -35,7 +35,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenLogin, activeTab, setActiv
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-xs transition-all duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-h-[105px] py-2.5">
+        <div className="flex items-center justify-between min-h-[64px] py-2">
           
           {/* Logo Section */}
           <div 
@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenLogin, activeTab, setActiv
             <img 
               src="https://pavnaschoolaligarh.com/wp-content/uploads/2026/04/Link-Logo-%E2%86%92-Pavna-School-Logo.webp" 
               alt="Pavna School Logo"
-              className="h-[81px] sm:h-[95px] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-[40px] sm:h-[48px] w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
           </div>
