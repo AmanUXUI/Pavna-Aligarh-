@@ -1,0 +1,6 @@
+{
+  "name": "Pavna School - Assessment & Evaluation Policy",
+  "description": "Assessment & Evaluation Policy web page for Pavna School with grade-wise assessment framework, grading criteria, interactive rubric explorer, and parent guidelines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

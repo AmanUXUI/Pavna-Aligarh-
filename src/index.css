@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+  }
+}
+
+.bg-primary {
+  background-color: #201A5B;
+}
+
+.text-primary {
+  color: #201A5B;
+}
+
+.border-primary {
+  border-color: #201A5B;
+}
+
+.bg-secondary {
+  background-color: #f48120;
+}
+
+.text-secondary {
+  color: #f48120;
+}
+
+.border-secondary {
+  border-color: #f48120;
+}
