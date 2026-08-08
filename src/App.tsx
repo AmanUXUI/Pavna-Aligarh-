@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ResultHighlights } from './components/ResultHighlights';
 import { FacultyPage } from './components/FacultyPage';
+import { BeyondAcademicsPage } from './components/BeyondAcademicsPage';
 import { LoginModal } from './components/LoginModal';
 import { SearchModal } from './components/SearchModal';
 
@@ -26,6 +27,8 @@ export default function App() {
       <main className="flex-grow">
         {activeTab === 'faculty' ? (
           <FacultyPage />
+        ) : activeTab === 'beyond-academics' ? (
+          <BeyondAcademicsPage />
         ) : (
           <>
             {/* Hero Section */}
