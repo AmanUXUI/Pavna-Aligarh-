@@ -20,7 +20,7 @@ interface ResultHighlightsProps {
 
 export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, setActiveTab }) => {
   const [selectedClass, setSelectedClass] = useState<'12th' | '10th'>('12th');
-  const [activeSessionTab, setActiveSessionTab] = useState<'2024-25' | '2025-26' | '2026-27'>('2024-25');
+  const [activeSessionTab, setActiveSessionTab] = useState<'2024-25' | '2025-26' | '2026-27'>('2025-26');
   const [streamFilter, setStreamFilter] = useState<string>('ALL');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [subView, setSubView] = useState<'overall' | 'toppers' | 'subjects'>('overall');
@@ -35,7 +35,147 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   }, [activeTab]);
 
-  // Top 3 Toppers Class XII
+  // ----------------2025-26 DATA (CLASS XII)----------------
+  const summaryStats2025_26_12th = [
+    { label: "Total Appeared", value: "79", unit: "Students", icon: Users },
+    { label: "Pass Percentage", value: "100%", unit: "Pass Rate", icon: CheckCircle2 },
+    { label: "Scored Above 90%", value: "10", unit: "12.7% Students", icon: Star },
+    { label: "Scored Above 80%", value: "37", unit: "46.8% Students", icon: Award },
+    { label: "Scored Above 60%", value: "77", unit: "97.5% Students", icon: TrendingUp },
+    { label: "School Average", value: "78.5%", unit: "78.49% Avg", icon: GraduationCap },
+  ];
+
+  const top3Toppers2025_26_12th = [
+    {
+      rank: 1,
+      name: "SHUBHITA SRIVASTAVA",
+      stream: "Commerce",
+      streamCode: "COM",
+      percentage: 98.0,
+      badge: "Overall School & Commerce Topper",
+      photo: "https://imgh.in/host/hb8pnw",
+      highlights: ["99/100 in Business Studies & Economics", "99/100 in Entrepreneurship"]
+    },
+    {
+      rank: 2,
+      name: "KAVYA SINGH",
+      stream: "Humanities",
+      streamCode: "HUM",
+      percentage: 96.8,
+      badge: "Humanities Stream Topper",
+      photo: "https://imgh.in/host/i2yzz6",
+      highlights: ["100/100 in Painting", "98/100 in Geography", "97/100 in History"]
+    },
+    {
+      rank: 3,
+      name: "GITANJALI SINGH",
+      stream: "Humanities",
+      streamCode: "HUM",
+      percentage: 96.2,
+      badge: "Humanities 2nd Ranker",
+      photo: "https://imgh.in/host/i2yzz6",
+      highlights: ["100/100 in Painting", "98/100 in English Core"]
+    }
+  ];
+
+  const toppers2025_26_12th: TopperStudent[] = [
+    { sNo: 1, name: "SHUBHITA SRIVASTAVA", stream: "COM", percentage: 98.0 },
+    { sNo: 2, name: "KAVYA SINGH", stream: "HUM", percentage: 96.8 },
+    { sNo: 3, name: "GITANJALI SINGH", stream: "HUM", percentage: 96.2 },
+    { sNo: 4, name: "KHUSHI VARSHNEY", stream: "HUM", percentage: 95.2 },
+    { sNo: 5, name: "AARUSH GODANI", stream: "COM", percentage: 94.4 },
+    { sNo: 6, name: "VIVAAN CHAUHAN", stream: "HUM", percentage: 94.2 },
+    { sNo: 7, name: "MADHVI RATHI", stream: "PCB", percentage: 93.0 },
+    { sNo: 8, name: "SHUBH SENGER", stream: "PCM", percentage: 90.2 },
+    { sNo: 9, name: "SHLOK MAHESHWARI", stream: "COM", percentage: 90.2 },
+    { sNo: 10, name: "PULKIT DESHWAL", stream: "PCB", percentage: 90.0 },
+  ];
+
+  const subjectToppers2025_26_12th: SubjectTopper[] = [
+    {
+      subject: "English Core",
+      toppers: [
+        { name: "GITANJALI SINGH", marks: 98 },
+        { name: "VAISHNAVI TAYAL", marks: 98 }
+      ]
+    },
+    {
+      subject: "Business Studies",
+      toppers: [{ name: "SHUBHITA SRIVASTAVA", marks: 99 }]
+    },
+    {
+      subject: "Economics",
+      toppers: [
+        { name: "SHUBHITA SRIVASTAVA", marks: 99 },
+        { name: "AARUSH GODANI", marks: 99 }
+      ]
+    },
+    {
+      subject: "Entrepreneurship",
+      toppers: [{ name: "SHUBHITA SRIVASTAVA", marks: 99 }]
+    },
+    {
+      subject: "Geography",
+      toppers: [{ name: "KAVYA SINGH", marks: 98 }]
+    },
+    {
+      subject: "Political Science",
+      toppers: [{ name: "KHUSHI VARSHNEY", marks: 98 }]
+    },
+    {
+      subject: "Dance",
+      toppers: [{ name: "SHREYA SAXENA", marks: 98 }]
+    },
+    {
+      subject: "Accountancy",
+      toppers: [{ name: "AARUSH GODANI", marks: 98 }]
+    },
+    {
+      subject: "History",
+      toppers: [{ name: "KAVYA SINGH", marks: 97 }]
+    },
+    {
+      subject: "Physical Education",
+      toppers: [{ name: "SHLOK MAHESHWARI", marks: 97 }]
+    },
+    {
+      subject: "Chemistry",
+      toppers: [{ name: "MADHVI RATHI", marks: 95 }]
+    },
+    {
+      subject: "Biology",
+      toppers: [{ name: "AANANDI VARSHNEY", marks: 95 }]
+    },
+    {
+      subject: "Informatics Practices",
+      toppers: [{ name: "NAVYA VARSHNEY", marks: 95 }]
+    },
+    {
+      subject: "Mathematics",
+      toppers: [{ name: "SHUBH SENGER", marks: 91 }]
+    },
+    {
+      subject: "Computer Science",
+      toppers: [{ name: "PRATYUSH SHARMA", marks: 90 }]
+    },
+    {
+      subject: "Physics",
+      toppers: [{ name: "PULKIT DESHWAL", marks: 86 }]
+    },
+    {
+      subject: "Painting",
+      toppers: [
+        { name: "PRINCE GUPTA", marks: 100 },
+        { name: "KAVYA SINGH", marks: 100 },
+        { name: "GITANJALI SINGH", marks: 100 },
+        { name: "VIVAAN CHAUHAN", marks: 100 },
+        { name: "MADHVI RATHI", marks: 100 },
+        { name: "PULKIT DESHWAL", marks: 100 }
+      ]
+    }
+  ];
+
+  // ----------------2024-25 DATA (CLASS XII)----------------
   const top3Toppers12th = [
     {
       rank: 1,
@@ -103,24 +243,6 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   ];
 
-  const top3Toppers = selectedClass === '10th' ? top3Toppers10th : top3Toppers12th;
-
-  // Auto slide every 5 seconds
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % top3Toppers.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [top3Toppers.length]);
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % top3Toppers.length);
-  };
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + top3Toppers.length) % top3Toppers.length);
-  };
-
   // Summary statistics for 2024-25
   const summaryStats12th = [
     { label: "Total Appeared", value: "101", unit: "Students", icon: Users },
@@ -141,6 +263,41 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
   ];
 
   const summaryStats2024_25 = selectedClass === '10th' ? summaryStats10th : summaryStats12th;
+
+  // Active dataset selection based on session tab and class
+  const summaryStatsActive = activeSessionTab === '2025-26'
+    ? (selectedClass === '10th' ? summaryStats10th : summaryStats2025_26_12th)
+    : summaryStats2024_25;
+
+  const top3ToppersActive = activeSessionTab === '2025-26'
+    ? (selectedClass === '10th' ? top3Toppers10th : top3Toppers2025_26_12th)
+    : (selectedClass === '10th' ? top3Toppers10th : top3Toppers12th);
+
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [activeSessionTab, selectedClass]);
+
+  // Auto slide every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (top3ToppersActive.length > 0) {
+        setCurrentSlide((prev) => (prev + 1) % top3ToppersActive.length);
+      }
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [top3ToppersActive.length]);
+
+  const handleNextSlide = () => {
+    if (top3ToppersActive.length > 0) {
+      setCurrentSlide((prev) => (prev + 1) % top3ToppersActive.length);
+    }
+  };
+
+  const handlePrevSlide = () => {
+    if (top3ToppersActive.length > 0) {
+      setCurrentSlide((prev) => (prev - 1 + top3ToppersActive.length) % top3ToppersActive.length);
+    }
+  };
 
   // 90% and Above Students List for 2024-25
   const toppers12th: TopperStudent[] = [
@@ -289,7 +446,13 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   ];
 
-  const subjectToppers2024_25 = selectedClass === '10th' ? subjectToppers10th : subjectToppers12th;
+  const toppersActive = activeSessionTab === '2025-26'
+    ? (selectedClass === '10th' ? toppers10th : toppers2025_26_12th)
+    : (selectedClass === '10th' ? toppers10th : toppers12th);
+
+  const subjectToppersActive = activeSessionTab === '2025-26'
+    ? (selectedClass === '10th' ? subjectToppers10th : subjectToppers2025_26_12th)
+    : (selectedClass === '10th' ? subjectToppers10th : subjectToppers12th);
 
   const getStreamBadgeColor = (stream: string) => {
     switch (stream) {
@@ -312,7 +475,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   };
 
-  const filteredToppers = toppers2024_25.filter(student => {
+  const filteredToppers = toppersActive.filter(student => {
     const matchesStream = selectedClass === '10th' || streamFilter === 'ALL' || student.stream === streamFilter;
     const matchesQuery = searchQuery === '' || 
       student.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
@@ -378,6 +541,19 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
         <div className="flex justify-center mb-8">
           <div className="inline-flex p-1.5 bg-white rounded-2xl border border-slate-200 shadow-xs max-w-full overflow-x-auto">
             <button
+              onClick={() => setActiveSessionTab('2025-26')}
+              className={`px-5 py-2.5 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 ${
+                activeSessionTab === '2025-26'
+                  ? 'bg-[#201A5B] text-white shadow-sm'
+                  : 'text-slate-600 hover:text-[#201A5B] hover:bg-slate-50'
+              }`}
+            >
+              <Award className="w-4 h-4 text-[#f48120]" />
+              <span>RESULT HIGHLIGHTS 2025–26</span>
+              <span className="bg-[#f48120] text-white text-[10px] px-1.5 py-0.5 rounded font-bold">100% Pass</span>
+            </button>
+
+            <button
               onClick={() => setActiveSessionTab('2024-25')}
               className={`px-5 py-2.5 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 ${
                 activeSessionTab === '2024-25'
@@ -388,18 +564,6 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
               <Award className="w-4 h-4 text-[#f48120]" />
               <span>RESULT HIGHLIGHTS 2024–25</span>
               <span className="bg-[#f48120] text-white text-[10px] px-1.5 py-0.5 rounded font-bold">100% Pass</span>
-            </button>
-
-            <button
-              onClick={() => setActiveSessionTab('2025-26')}
-              className={`px-5 py-2.5 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 ${
-                activeSessionTab === '2025-26'
-                  ? 'bg-[#201A5B] text-white shadow-sm'
-                  : 'text-slate-600 hover:text-[#201A5B] hover:bg-slate-50'
-              }`}
-            >
-              <span>RESULT HIGHLIGHTS 2025–26</span>
-              <span className="bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.5 rounded font-bold">Upcoming</span>
             </button>
 
             <button
@@ -416,13 +580,13 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
           </div>
         </div>
 
-        {/* Tab Content 1: 2024-25 (Detailed PDF Data) */}
-        {activeSessionTab === '2024-25' && (
+        {/* Tab Content 1 & 2: 2025-26 & 2024-25 Data Views */}
+        {(activeSessionTab === '2025-26' || activeSessionTab === '2024-25') && (
           <div className="space-y-8 animate-in fade-in duration-300">
             
             {/* Top Stat Summary Cards */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-              {summaryStats2024_25.map((stat, idx) => {
+              {summaryStatsActive.map((stat, idx) => {
                 const IconComponent = stat.icon;
                 return (
                   <div key={idx} className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs flex flex-col justify-between hover:border-slate-300 transition-colors">
@@ -456,7 +620,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                 {/* Slide Count & Controls */}
                 <div className="flex items-center gap-3">
                   <span className="text-xs font-mono font-bold text-slate-300">
-                    0{currentSlide + 1} <span className="text-slate-500">/ 0{top3Toppers.length}</span>
+                    0{(currentSlide % top3ToppersActive.length) + 1} <span className="text-slate-500">/ 0{top3ToppersActive.length}</span>
                   </span>
                   <div className="flex items-center gap-1.5">
                     <button
@@ -478,84 +642,85 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
               </div>
 
               {/* Main Slider Grid */}
-              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                
-                {/* Left Column: Student Photo & Rank */}
-                <div className="lg:col-span-4 flex flex-col items-center justify-center">
-                  <div className="relative group pb-2">
-                    <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden bg-slate-900 border-2 border-white/20">
-                      <img 
-                        src={top3Toppers[currentSlide].photo} 
-                        alt={top3Toppers[currentSlide].name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                        referrerPolicy="no-referrer"
-                      />
+              {top3ToppersActive[currentSlide % top3ToppersActive.length] && (
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  
+                  {/* Left Column: Student Photo & Rank */}
+                  <div className="lg:col-span-4 flex flex-col items-center justify-center">
+                    <div className="relative group pb-2">
+                      <div className="relative w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-2xl overflow-hidden bg-slate-900 border-2 border-white/20">
+                        <img 
+                          src={top3ToppersActive[currentSlide % top3ToppersActive.length].photo} 
+                          alt={top3ToppersActive[currentSlide % top3ToppersActive.length].name}
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          referrerPolicy="no-referrer"
+                        />
+                      </div>
+
+                      {/* Rank Pill Overlay */}
+                      <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#f48120] text-white px-5 py-2 rounded-full text-sm font-black font-sans tracking-wide shadow-xl flex items-center gap-2 whitespace-nowrap border-2 border-white z-20">
+                        <Star className="w-4 h-4 fill-white text-white shrink-0" />
+                        <span>CBSE RANK #{top3ToppersActive[currentSlide % top3ToppersActive.length].rank}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Middle Column: Detailed Topper Stats */}
+                  <div className="lg:col-span-5 text-center lg:text-left space-y-4">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-semibold text-slate-200">
+                      <GraduationCap className="w-3.5 h-3.5 text-[#f48120]" />
+                      <span>{top3ToppersActive[currentSlide % top3ToppersActive.length].badge}</span>
                     </div>
 
-                    {/* Rank Pill Overlay */}
-                    <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#f48120] text-white px-5 py-2 rounded-full text-sm font-black font-sans tracking-wide shadow-xl flex items-center gap-2 whitespace-nowrap border-2 border-white z-20">
-                      <Star className="w-4 h-4 fill-white text-white shrink-0" />
-                      <span>CBSE RANK #{top3Toppers[currentSlide].rank}</span>
+                    <div>
+                      <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                        {top3ToppersActive[currentSlide % top3ToppersActive.length].name}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">
+                        {selectedClass === '10th' ? 'Class X' : 'Class XII'} • {top3ToppersActive[currentSlide % top3ToppersActive.length].stream}
+                      </p>
+                    </div>
+
+                    <div className="inline-flex items-baseline gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-2xl">
+                      <span className="text-3xl font-black font-mono text-[#f48120]">
+                        {top3ToppersActive[currentSlide % top3ToppersActive.length].percentage}%
+                      </span>
+                      <span className="text-xs text-slate-300 font-semibold uppercase tracking-wider">
+                        Aggregate CBSE Marks
+                      </span>
+                    </div>
+
+                    {/* Highlights */}
+                    <div className="space-y-1.5 pt-1">
+                      <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Key Subject Scores</span>
+                      <div className="flex flex-wrap justify-center lg:justify-start gap-2">
+                        {top3ToppersActive[currentSlide % top3ToppersActive.length].highlights.map((hl, hlIdx) => (
+                          <span key={hlIdx} className="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-lg text-xs font-semibold text-white border border-white/10">
+                            <CheckCircle2 className="w-3.5 h-3.5 text-[#f48120]" />
+                            <span>{hl}</span>
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Middle Column: Detailed Topper Stats */}
-                <div className="lg:col-span-5 text-center lg:text-left space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-xs font-semibold text-slate-200">
-                    <GraduationCap className="w-3.5 h-3.5 text-[#f48120]" />
-                    <span>{top3Toppers[currentSlide].badge}</span>
-                  </div>
-
-                  <div>
-                    <h3 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                      {top3Toppers[currentSlide].name}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">
-                      {selectedClass === '10th' ? 'Class X' : 'Class XII'} • {top3Toppers[currentSlide].stream}
-                    </p>
-                  </div>
-
-                  <div className="inline-flex items-baseline gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-2xl">
-                    <span className="text-3xl font-black font-mono text-[#f48120]">
-                      {top3Toppers[currentSlide].percentage}%
+                  {/* Right Column: Interactive Quick Switcher List */}
+                  <div className="lg:col-span-3 space-y-2.5">
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block text-center lg:text-left">
+                      {selectedClass === '10th' ? 'Top 3 Class X Rankers' : 'Top 3 Stream Rankers'}
                     </span>
-                    <span className="text-xs text-slate-300 font-semibold uppercase tracking-wider">
-                      Aggregate CBSE Marks
-                    </span>
-                  </div>
 
-                  {/* Highlights */}
-                  <div className="space-y-1.5 pt-1">
-                    <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Key Subject Scores</span>
-                    <div className="flex flex-wrap justify-center lg:justify-start gap-2">
-                      {top3Toppers[currentSlide].highlights.map((hl, hlIdx) => (
-                        <span key={hlIdx} className="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1 rounded-lg text-xs font-semibold text-white border border-white/10">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#f48120]" />
-                          <span>{hl}</span>
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Column: Interactive Quick Switcher List */}
-                <div className="lg:col-span-3 space-y-2.5">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 block text-center lg:text-left">
-                    {selectedClass === '10th' ? 'Top 3 Class X Rankers' : 'Top 3 Stream Rankers'}
-                  </span>
-
-                  <div className="space-y-2">
-                    {top3Toppers.map((student, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setCurrentSlide(idx)}
-                        className={`w-full p-3 rounded-2xl border transition-all text-left flex items-center gap-3 cursor-pointer ${
-                          currentSlide === idx
-                            ? 'bg-white/15 border-[#f48120] shadow-sm ring-1 ring-[#f48120]/50'
-                            : 'bg-white/5 border-white/10 hover:bg-white/10'
-                        }`}
-                      >
+                    <div className="space-y-2">
+                      {top3ToppersActive.map((student, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setCurrentSlide(idx)}
+                          className={`w-full p-3 rounded-2xl border transition-all text-left flex items-center gap-3 cursor-pointer ${
+                            (currentSlide % top3ToppersActive.length) === idx
+                              ? 'bg-white/15 border-[#f48120] shadow-sm ring-1 ring-[#f48120]/50'
+                              : 'bg-white/5 border-white/10 hover:bg-white/10'
+                          }`}
+                        >
                         <div className="relative shrink-0">
                           <img 
                             src={student.photo} 
@@ -578,6 +743,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                 </div>
 
               </div>
+            )}
 
             </div>
 
@@ -653,7 +819,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                     </h3>
                   </div>
                   <span className="text-xs text-slate-500 font-medium hidden sm:inline">
-                    Academic Session 2024–25
+                    Academic Session {activeSessionTab}
                   </span>
                 </div>
 
@@ -693,7 +859,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                             </span>
                           </td>
                           <td className="py-3.5 px-4 text-right font-mono font-black text-[#201A5B] text-base">
-                            {student.percentage}%
+                            {student.percentage.toFixed(1)}%
                           </td>
                         </tr>
                       ))}
@@ -715,13 +881,13 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                 <div className="p-4 bg-slate-100 rounded-2xl border border-slate-200 text-xs text-[#201A5B] flex items-center justify-between">
                   <div className="flex items-center gap-2 font-bold">
                     <BookOpen className="w-4 h-4 text-[#f48120]" />
-                    <span>Subject Wise Highest Score Breakdown (Academic Session 2024–25)</span>
+                    <span>Subject Wise Highest Score Breakdown (Academic Session {activeSessionTab})</span>
                   </div>
-                  <span className="font-semibold text-slate-500 text-[11px]">17 Academic Disciplines</span>
+                  <span className="font-semibold text-slate-500 text-[11px]">{subjectToppersActive.length} Academic Disciplines</span>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {subjectToppers2024_25.map((st, idx) => (
+                  {subjectToppersActive.map((st, idx) => (
                     <div key={idx} className="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs hover:border-slate-300 transition-all flex flex-col justify-between">
                       <div>
                         <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-100">
@@ -750,25 +916,6 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
               </div>
             )}
 
-          </div>
-        )}
-
-        {/* Tab Content 2: 2025-26 (Upcoming Result Notice) */}
-        {activeSessionTab === '2025-26' && (
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 text-center space-y-4 max-w-2xl mx-auto shadow-xs animate-in fade-in duration-300">
-            <div className="w-16 h-16 rounded-2xl bg-slate-50 text-[#201A5B] flex items-center justify-center mx-auto border border-slate-200">
-              <GraduationCap className="w-8 h-8 text-[#f48120]" />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900">Academic Session 2025–26 Class XII Results</h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              The CBSE Class XII Board Examinations for the 2025–26 academic session are currently undergoing official evaluation. Detailed merit statistics, subject-wise topper profiles, and stream breakdown will be published immediately upon official CBSE declaration.
-            </p>
-            <div className="pt-2">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#201A5B] bg-slate-50 px-4 py-2 rounded-full border border-slate-200">
-                <Sparkles className="w-3.5 h-3.5 text-[#f48120]" />
-                <span>Expected Declaration: May 2026</span>
-              </span>
-            </div>
           </div>
         )}
 
