@@ -79,14 +79,7 @@ const AutoCarousel: React.FC<AutoCarouselProps> = ({ images, title }) => {
             referrerPolicy="no-referrer"
           />
           {/* Subtle gradient vignette */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-          
-          {/* Bottom Caption Pill */}
-          <div className="absolute bottom-4 left-4 right-4 z-20">
-            <span className="inline-block bg-black/60 backdrop-blur-md text-white text-xs font-medium px-3 py-1.5 rounded-lg border border-white/10 shadow-xs">
-              {img.caption}
-            </span>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         </div>
       ))}
 

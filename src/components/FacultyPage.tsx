@@ -33,13 +33,9 @@ const DEFAULT_AVATAR = "https://static.vecteezy.com/system/resources/thumbnails/
 
 export const FacultyPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  // All accordion items expanded by default or selectively opened
+  // First accordion item expanded by default ('english'), all others collapsed initially
   const [openDeptIds, setOpenDeptIds] = useState<Record<string, boolean>>({
-    'english': true,
-    'mathematics': true,
-    'science-physics': false,
-    'science-chemistry': false,
-    'science-biology': false,
+    'english': true
   });
 
   const principal = {
