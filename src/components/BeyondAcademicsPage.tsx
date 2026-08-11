@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   ChevronLeft, 
   ChevronRight, 
+  ChevronDown,
   Trophy, 
   Music, 
   Palette, 
@@ -123,6 +124,22 @@ const AutoCarousel: React.FC<AutoCarouselProps> = ({ images, title }) => {
 };
 
 export const BeyondAcademicsPage: React.FC = () => {
+  const [openSectionIds, setOpenSectionIds] = useState<string[]>(['sports']);
+
+  const toggleSection = (id: string) => {
+    setOpenSectionIds((prev) => 
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
+  const expandAll = () => {
+    setOpenSectionIds(sectionsData.map((s) => s.id));
+  };
+
+  const collapseAll = () => {
+    setOpenSectionIds([]);
+  };
+
   const sectionsData: SectionData[] = [
     {
       id: 'sports',
@@ -369,90 +386,146 @@ export const BeyondAcademicsPage: React.FC = () => {
       </div>
 
       {/* Main Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 lg:space-y-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* 2. Content Sections (6 sections total, alternating image/content layout) */}
-        {sectionsData.map((section, idx) => {
-          const Icon = section.icon;
-          const isImageLeft = section.imagePosition === 'left';
-
-          return (
-            <div 
-              key={section.id} 
-              className="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-200/90 shadow-2xs hover:shadow-md transition-shadow duration-300"
+        {/* Accordion Controls Bar */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 bg-white p-4 rounded-2xl border border-slate-200/80 shadow-2xs">
+          <p className="text-xs sm:text-sm text-slate-600 font-medium">
+            Click any section below to expand and explore co-curricular activities.
+          </p>
+          <div className="flex items-center gap-2 self-start sm:self-auto">
+            <button 
+              onClick={expandAll}
+              className="text-xs font-bold text-[#201A5B] hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg border border-blue-200/60 transition-colors cursor-pointer"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                
-                {/* Image Column */}
-                <div 
-                  className={`lg:col-span-5 ${
-                    isImageLeft ? 'lg:order-1' : 'lg:order-2'
-                  }`}
-                >
-                  <AutoCarousel 
-                    images={section.images} 
-                    title={section.title} 
-                  />
-                </div>
+              Expand All
+            </button>
+            <button 
+              onClick={collapseAll}
+              className="text-xs font-bold text-slate-600 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-lg border border-slate-200 transition-colors cursor-pointer"
+            >
+              Collapse All
+            </button>
+          </div>
+        </div>
 
-                {/* Content Column */}
-                <div 
-                  className={`lg:col-span-7 space-y-5 ${
-                    isImageLeft ? 'lg:order-2' : 'lg:order-1'
-                  }`}
+        {/* Accordion Sections List */}
+        <div className="space-y-5">
+          {sectionsData.map((section, idx) => {
+            const Icon = section.icon;
+            const isImageLeft = section.imagePosition === 'left';
+            const isExpanded = openSectionIds.includes(section.id);
+
+            return (
+              <div 
+                key={section.id} 
+                className={`bg-white rounded-3xl border transition-all duration-300 overflow-hidden ${
+                  isExpanded 
+                    ? 'border-blue-300 ring-2 ring-[#201A5B]/10 shadow-md' 
+                    : 'border-slate-200/90 shadow-2xs hover:border-slate-300 hover:shadow-xs'
+                }`}
+              >
+                {/* Accordion Header Button */}
+                <button
+                  type="button"
+                  onClick={() => toggleSection(section.id)}
+                  aria-expanded={isExpanded}
+                  className="w-full p-5 sm:p-7 flex items-center justify-between gap-4 text-left cursor-pointer transition-colors hover:bg-slate-50/80 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#201A5B]/30"
                 >
-                  {/* Badge & Icon Header */}
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-blue-50 text-[#201A5B] border border-blue-100">
-                      <Icon className="w-5 h-5 text-[#201A5B]" />
+                  <div className="flex items-center gap-4 min-w-0 flex-1">
+                    {/* Icon Container */}
+                    <div className={`p-3 rounded-2xl shrink-0 transition-all duration-300 ${
+                      isExpanded 
+                        ? 'bg-[#201A5B] text-white shadow-sm' 
+                        : 'bg-blue-50 text-[#201A5B] border border-blue-100'
+                    }`}>
+                      <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#201A5B] bg-blue-50 px-3 py-1 rounded-full border border-blue-200/60">
-                      {section.badge}
-                    </span>
-                    <span className="text-xs text-slate-400 font-semibold ml-auto hidden sm:inline">
-                      Section 0{idx + 1}
-                    </span>
+
+                    {/* Section Header Text */}
+                    <div className="min-w-0 flex-1">
+                      <h2 className="text-[18px] font-bold text-[#201A5B] tracking-tight leading-[28px]">
+                        {section.title}
+                      </h2>
+                      <p className="text-xs sm:text-sm font-medium text-slate-500 mt-0.5 line-clamp-1 sm:line-clamp-none">
+                        {section.subtitle}
+                      </p>
+                    </div>
                   </div>
 
-                  {/* Section Title */}
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#201A5B] tracking-tight">
-                      {section.title}
-                    </h2>
-                    <p className="text-sm sm:text-base font-semibold text-slate-500 mt-1">
-                      {section.subtitle}
-                    </p>
+                  {/* Expand / Collapse Chevron Indicator */}
+                  <div className={`p-2 rounded-full transition-all duration-300 shrink-0 ${
+                    isExpanded ? 'bg-blue-100 text-[#201A5B] rotate-180' : 'bg-slate-100 text-slate-500'
+                  }`}>
+                    <ChevronDown className="w-5 h-5" />
                   </div>
+                </button>
 
-                  {/* Dummy Paragraphs (Lorem Ipsum as requested) */}
-                  <div className="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-                    {section.loremParagraphs.map((para, pIdx) => (
-                      <p key={pIdx}>{para}</p>
-                    ))}
-                  </div>
+                {/* Accordion Content Body */}
+                {isExpanded && (
+                  <div className="p-6 sm:p-8 md:p-10 border-t border-slate-100 bg-white animate-in fade-in duration-300">
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                      
+                      {/* Image Column */}
+                      <div 
+                        className={`lg:col-span-5 ${
+                          isImageLeft ? 'lg:order-1' : 'lg:order-2'
+                        }`}
+                      >
+                        <AutoCarousel 
+                          images={section.images} 
+                          title={section.title} 
+                        />
+                      </div>
 
-                  {/* Key Highlights Bullet List */}
-                  <div className="pt-2">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-[#201A5B] mb-2.5 flex items-center gap-1.5">
-                      <span>Key Highlights</span>
-                      <ArrowRight className="w-3.5 h-3.5 text-[#201A5B]" />
-                    </h4>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                      {section.keyHighlights.map((highlight, hIdx) => (
-                        <div key={hIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-                          <CheckCircle2 className="w-4 h-4 text-[#201A5B] shrink-0 mt-0.5" />
-                          <span>{highlight}</span>
+                      {/* Content Column */}
+                      <div 
+                        className={`lg:col-span-7 space-y-5 ${
+                          isImageLeft ? 'lg:order-2' : 'lg:order-1'
+                        }`}
+                      >
+                        {/* Section Title in expanded view */}
+                        <div>
+                          <h3 className="text-xl sm:text-2xl font-bold text-[#201A5B] tracking-tight">
+                            {section.title}
+                          </h3>
+                          <p className="text-sm sm:text-base font-semibold text-slate-500 mt-1">
+                            {section.subtitle}
+                          </p>
                         </div>
-                      ))}
+
+                        {/* Paragraphs */}
+                        <div className="space-y-3 text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+                          {section.loremParagraphs.map((para, pIdx) => (
+                            <p key={pIdx}>{para}</p>
+                          ))}
+                        </div>
+
+                        {/* Key Highlights */}
+                        <div className="pt-2">
+                          <h4 className="text-xs font-bold uppercase tracking-wider text-[#201A5B] mb-2.5 flex items-center gap-1.5">
+                            <span>Key Highlights</span>
+                            <ArrowRight className="w-3.5 h-3.5 text-[#201A5B]" />
+                          </h4>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            {section.keyHighlights.map((highlight, hIdx) => (
+                              <div key={hIdx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 bg-slate-50 p-2.5 rounded-xl border border-slate-100">
+                                <CheckCircle2 className="w-4 h-4 text-[#201A5B] shrink-0 mt-0.5" />
+                                <span>{highlight}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+
+                      </div>
+
                     </div>
                   </div>
-
-                </div>
-
+                )}
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
 
       </div>
     </div>
