@@ -184,7 +184,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "HUM",
       percentage: 98.6,
       badge: "Overall School Topper",
-      photo: "https://imgh.in/host/hb8pnw",
+      photo: "https://imgh.in/host/k187ox",
       highlights: ["100/100 in English Core", "100/100 in Political Science"]
     },
     {
@@ -194,7 +194,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "COM",
       percentage: 97.6,
       badge: "Commerce Stream Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: "https://imgh.in/host/epait3",
       highlights: ["99/100 in Economics", "98/100 in Accountancy & Business Studies"]
     },
     {
@@ -204,7 +204,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "PCB",
       percentage: 95.8,
       badge: "Science Stream Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: "https://imgh.in/host/kq97g7",
       highlights: ["100/100 in Painting", "94/100 in Biology"]
     }
   ];
