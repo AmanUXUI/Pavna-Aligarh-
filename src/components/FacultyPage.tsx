@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { 
   ChevronDown, 
   Search, 
@@ -441,13 +442,14 @@ export const FacultyPage: React.FC = () => {
               return (
                 <div 
                   key={dept.id}
-                  className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs overflow-hidden transition-all duration-200"
+                  className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden transition-all duration-200"
                 >
                   {/* Accordion Header Bar */}
                   <button
+                    type="button"
                     onClick={() => toggleDept(dept.id)}
-                    className={`w-full px-5 py-4 sm:px-6 sm:py-5 flex items-center justify-between gap-4 text-left cursor-pointer transition-colors ${
-                      isOpen ? 'bg-blue-50/50 border-b border-slate-200' : 'hover:bg-slate-50/80'
+                    className={`w-full px-5 py-4 sm:px-6 sm:py-5 flex items-center justify-between gap-4 text-left cursor-pointer transition-colors outline-none focus:outline-none focus:ring-0 focus-visible:outline-none select-none ${
+                      isOpen ? 'bg-blue-50/50' : 'hover:bg-slate-50/80'
                     }`}
                   >
                     <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
@@ -485,73 +487,97 @@ export const FacultyPage: React.FC = () => {
                     </div>
                   </button>
 
-                  {/* Accordion Body Content */}
-                  {isOpen && (
-                    <div className="p-5 sm:p-6 bg-slate-50/50 animate-in fade-in duration-200">
-                      {/* Grid of Faculty Cards */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
-                        {dept.members.map((member, idx) => (
-                          <div 
-                            key={idx}
-                            className={`bg-white rounded-2xl border transition-all duration-300 hover:shadow-xl flex flex-col overflow-hidden relative group ${
-                              member.isHOD 
-                                ? 'border-blue-300 ring-2 ring-[#201A5B]/20 shadow-sm' 
-                                : 'border-slate-200/90 shadow-2xs hover:border-blue-300'
-                            }`}
-                          >
-                            {/* Faculty Image Frame */}
-                            <div className="relative aspect-4/3 w-full bg-slate-100 overflow-hidden">
-                              <img 
-                                src={member.image || DEFAULT_AVATAR} 
-                                alt={member.name}
-                                className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                                referrerPolicy="no-referrer"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
+                  {/* Accordion Body Content with Smooth Height Animation */}
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        key={`content-${dept.id}`}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ 
+                          height: "auto", 
+                          opacity: 1,
+                          transition: {
+                            height: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+                            opacity: { duration: 0.25, delay: 0.05 }
+                          }
+                        }}
+                        exit={{ 
+                          height: 0, 
+                          opacity: 0,
+                          transition: {
+                            height: { duration: 0.28, ease: [0.16, 1, 0.3, 1] },
+                            opacity: { duration: 0.15 }
+                          }
+                        }}
+                        className="overflow-hidden bg-slate-50/50 border-t border-slate-200/80"
+                      >
+                        <div className="p-5 sm:p-6">
+                          {/* Grid of Faculty Cards */}
+                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
+                            {dept.members.map((member, idx) => (
+                              <div 
+                                key={idx}
+                                className={`bg-white rounded-2xl border transition-all duration-300 hover:shadow-xl flex flex-col overflow-hidden relative group ${
+                                  member.isHOD 
+                                    ? 'border-blue-300 ring-2 ring-[#201A5B]/20 shadow-sm' 
+                                    : 'border-slate-200/90 shadow-2xs hover:border-blue-300'
+                                }`}
+                              >
+                                {/* Faculty Image Frame */}
+                                <div className="relative aspect-4/3 w-full bg-slate-100 overflow-hidden">
+                                  <img 
+                                    src={member.image || DEFAULT_AVATAR} 
+                                    alt={member.name}
+                                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                                    referrerPolicy="no-referrer"
+                                  />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-40 group-hover:opacity-20 transition-opacity" />
 
-                              {/* HOD Badge */}
-                              {member.isHOD && (
-                                <div className="absolute top-3 right-3 bg-[#201A5B] text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-md border border-white/20 backdrop-blur-xs flex items-center gap-1">
-                                  <Award className="w-3.5 h-3.5 text-amber-300" />
-                                  <span>HOD</span>
+                                  {/* HOD Badge */}
+                                  {member.isHOD && (
+                                    <div className="absolute top-3 right-3 bg-[#201A5B] text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-md border border-white/20 backdrop-blur-xs flex items-center gap-1">
+                                      <Award className="w-3.5 h-3.5 text-amber-300" />
+                                      <span>HOD</span>
+                                    </div>
+                                  )}
                                 </div>
-                              )}
-                            </div>
 
-                            {/* Card Details */}
-                            <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-white">
-                              <div>
-                                <h4 className="text-base font-extrabold text-[#201A5B] leading-snug group-hover:text-blue-700 transition-colors">
-                                  {member.name}
-                                </h4>
+                                {/* Card Details */}
+                                <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-white">
+                                  <div>
+                                    <h4 className="text-base font-extrabold text-[#201A5B] leading-snug group-hover:text-blue-700 transition-colors">
+                                      {member.name}
+                                    </h4>
 
-                                <div className="mt-2">
-                                  <span className={`text-xs font-semibold px-2.5 py-1 rounded-md inline-block ${
-                                    member.isHOD 
-                                      ? 'bg-blue-100 text-[#201A5B] font-bold' 
-                                      : 'bg-slate-100 text-slate-600'
-                                  }`}>
-                                    {member.designation || (member.isHOD ? "Head of Department" : "Faculty Member")}
-                                  </span>
+                                    <div className="mt-2">
+                                      <span className={`text-xs font-semibold px-2.5 py-1 rounded-md inline-block ${
+                                        member.isHOD 
+                                          ? 'bg-blue-100 text-[#201A5B] font-bold' 
+                                          : 'bg-slate-100 text-slate-600'
+                                      }`}>
+                                        {member.designation || (member.isHOD ? "Head of Department" : "Faculty Member")}
+                                      </span>
+                                    </div>
+                                  </div>
+
+                                  {/* Footer department tag */}
+                                  <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+                                    <span className="flex items-center gap-1 text-slate-500">
+                                      <UserCheck className="w-3.5 h-3.5 text-[#201A5B]" />
+                                      <span>Faculty</span>
+                                    </span>
+                                    <span className="bg-slate-50 text-slate-500 px-2.5 py-0.5 rounded border border-slate-200/60 font-semibold">
+                                      {dept.name}
+                                    </span>
+                                  </div>
                                 </div>
                               </div>
-
-                              {/* Footer department tag */}
-                              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-medium">
-                                <span className="flex items-center gap-1 text-slate-500">
-                                  <UserCheck className="w-3.5 h-3.5 text-[#201A5B]" />
-                                  <span>Faculty</span>
-                                </span>
-                                <span className="bg-slate-50 text-slate-500 px-2.5 py-0.5 rounded border border-slate-200/60 font-semibold">
-                                  {dept.name}
-                                </span>
-                              </div>
-                            </div>
+                            ))}
                           </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               );
             })

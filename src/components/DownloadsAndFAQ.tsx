@@ -146,8 +146,9 @@ export const DownloadsAndFAQ: React.FC = () => {
                     className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs transition-all"
                   >
                     <button
+                      type="button"
                       onClick={() => toggleFaq(faq.id)}
-                      className="w-full p-4 sm:p-5 text-left font-bold text-slate-900 text-xs sm:text-sm flex items-center justify-between gap-3 hover:bg-slate-50/80 transition-colors cursor-pointer"
+                      className="w-full p-4 sm:p-5 text-left font-bold text-slate-900 text-xs sm:text-sm flex items-center justify-between gap-3 hover:bg-slate-50/80 transition-colors cursor-pointer outline-none focus:outline-none focus:ring-0 select-none"
                     >
                       <span className="flex items-center gap-2">
                         <HelpCircle className="w-4 h-4 text-[#f37021] shrink-0" />

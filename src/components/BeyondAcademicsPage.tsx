@@ -423,7 +423,7 @@ export const BeyondAcademicsPage: React.FC = () => {
                   type="button"
                   onClick={() => toggleSection(section.id)}
                   aria-expanded={isExpanded}
-                  className="w-full p-5 sm:p-7 flex items-center justify-between gap-4 text-left cursor-pointer transition-colors hover:bg-slate-50/80 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#201A5B]/30"
+                  className="w-full p-5 sm:p-7 flex items-center justify-between gap-4 text-left cursor-pointer transition-colors hover:bg-slate-50/80 outline-none focus:outline-none focus:ring-0 focus-visible:outline-none select-none"
                 >
                   <div className="flex items-center gap-4 min-w-0 flex-1">
                     {/* Icon Container */}
