@@ -68,8 +68,7 @@ export const FacultyPage: React.FC = () => {
         { name: "Sateesh Jain", designation: "PGT Hindi", image: "https://imgh.in/host/2z9vxf" },
         { name: "Perwez Alam", designation: "TGT Language Specialist", image: "https://imgh.in/host/m400yo" },
         { name: "Mohd Uzair", designation: "TGT Language Specialist", image: "https://imgh.in/host/tfycj5" },
-        { name: "Isra Tariq", designation: "TGT Language Specialist", image: "https://imgh.in/host/yzj8al" },
-        { name: "Ms. Bhavana", designation: "PRT Hindi" }
+        { name: "Isra Tariq", designation: "TGT Language Specialist", image: "https://imgh.in/host/yzj8al" }
       ]
     },
     {
@@ -77,10 +76,10 @@ export const FacultyPage: React.FC = () => {
       name: "Mathematics",
       description: "Building strong analytical reasoning, problem-solving skills, and numerical logic.",
       members: [
-        { name: "Binod Kumar Sharma", isHOD: true, designation: "Head of Department (HOD)" },
-        { name: "Seema Maheshwari", designation: "PGT Mathematics" },
-        { name: "Priti Shah", designation: "TGT Mathematics" },
-        { name: "Tanvi Joshi", designation: "TGT Mathematics" }
+        { name: "Binod Kumar Sharma", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/h8juun" },
+        { name: "Seema Maheshwari", designation: "PGT Mathematics", image: "https://imgh.in/host/ohqk2c" },
+        { name: "Priti Shah", designation: "TGT Mathematics", image: "https://imgh.in/host/jmzw57" },
+        { name: "Tanvi Joshi", designation: "TGT Mathematics", image: "https://imgh.in/host/m5ka50" }
       ]
     },
     {
@@ -88,9 +87,9 @@ export const FacultyPage: React.FC = () => {
       name: "Commerce",
       description: "Nurturing future business leaders, financial strategists, and economic thinkers.",
       members: [
-        { name: "Intisar Ahmad", isHOD: true, designation: "Head of Department (HOD)" },
-        { name: "Syed Mubashir Ali", designation: "PGT Accountancy & Business Studies" },
-        { name: "Rajesh", designation: "PGT Economics" }
+        { name: "Intisar Ahmad", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/bcsiqn" },
+        { name: "Syed Mubashir Ali", designation: "PGT Accountancy & Business Studies", image: "https://imgh.in/host/sg9l65" },
+        { name: "Rajesh", designation: "PGT Economics", image: "https://imgh.in/host/j4k78f" }
       ]
     },
     {
@@ -98,7 +97,7 @@ export const FacultyPage: React.FC = () => {
       name: "Chemistry",
       description: "Exploring molecular science, chemical reactions, and practical laboratory inquiry.",
       members: [
-        { name: "Meha Mishra", isHOD: true, designation: "Head of Department (HOD)" },
+        { name: "Meha Mishra", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/48e6cu" },
         { name: "Anuj Vashistha", designation: "PGT Chemistry" },
         { name: "Ms. Deeksha Mishra", designation: "TGT Chemistry" }
       ]
@@ -108,9 +107,9 @@ export const FacultyPage: React.FC = () => {
       name: "Computer",
       description: "Empowering technological literacy, computational thinking, and software skills.",
       members: [
-        { name: "Harshvardhan Thakur", designation: "PGT Computer Science" },
-        { name: "Rajeev Kushwaha", designation: "TGT Information Technology" },
-        { name: "Sneh Lata", designation: "PRT Computer Science" }
+        { name: "Harshvardhan Thakur", designation: "PGT Computer Science", image: "https://imgh.in/host/wxuakc" },
+        { name: "Rajeev Kushwaha", designation: "TGT Information Technology", image: "https://imgh.in/host/ot2sj8" },
+        { name: "Sneh Lata", designation: "PRT Computer Science", image: "https://imgh.in/host/bh5r20" }
       ]
     },
     {
@@ -126,8 +125,8 @@ export const FacultyPage: React.FC = () => {
       name: "Physics",
       description: "Investigating natural phenomena, mechanics, optics, and experimental principles.",
       members: [
-        { name: "Alok Chaturvedi", isHOD: true, designation: "Head of Department (HOD)" },
-        { name: "Sumedha Pathak", designation: "PGT Physics" }
+        { name: "Alok Chaturvedi", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/3e1tw7" },
+        { name: "Sumedha Pathak", designation: "PGT Physics", image: "https://imgh.in/host/7ospa9" }
       ]
     },
     {
