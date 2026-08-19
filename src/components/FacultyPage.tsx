@@ -53,11 +53,10 @@ export const FacultyPage: React.FC = () => {
       name: "English",
       description: "Fostering linguistic fluency, literary critique, and expressive communication.",
       members: [
-        { name: "Ms. Ari-Ishi Jain", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/a40g6f" },
+        { name: "Ms. Arushi Jain", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/a40g6f" },
         { name: "Ms. Smita Ghosh", designation: "PGT English", image: "https://imgh.in/host/2iqywe" },
         { name: "Ms. Savitri Singh", designation: "TGT English", image: "https://imgh.in/host/8qg65t" },
-        { name: "Ms. Jyoti Sharma", designation: "TGT English", image: "https://imgh.in/host/rn6lf0" },
-        { name: "Sakshi Upadhyay", designation: "PRT English" }
+        { name: "Ms. Jyoti Sharma", designation: "TGT English", image: "https://imgh.in/host/rn6lf0" }
       ]
     },
     {
@@ -65,11 +64,11 @@ export const FacultyPage: React.FC = () => {
       name: "Hindi & TL",
       description: "Promoting cultural literature, language proficiency, and third-language learning.",
       members: [
-        { name: "Brajesh Kumar", isHOD: true, designation: "Head of Department (HOD)" },
-        { name: "Sateesh Jain", designation: "PGT Hindi" },
-        { name: "Perwez Alam", designation: "TGT Language Specialist" },
-        { name: "Mohd Uzair", designation: "TGT Language Specialist" },
-        { name: "Isra Tariq", designation: "TGT Language Specialist" },
+        { name: "Brajesh Kumar", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/cr467o" },
+        { name: "Sateesh Jain", designation: "PGT Hindi", image: "https://imgh.in/host/2z9vxf" },
+        { name: "Perwez Alam", designation: "TGT Language Specialist", image: "https://imgh.in/host/m400yo" },
+        { name: "Mohd Uzair", designation: "TGT Language Specialist", image: "https://imgh.in/host/tfycj5" },
+        { name: "Isra Tariq", designation: "TGT Language Specialist", image: "https://imgh.in/host/yzj8al" },
         { name: "Ms. Bhavana", designation: "PRT Hindi" }
       ]
     },
