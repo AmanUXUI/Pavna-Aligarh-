@@ -53,7 +53,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "COM",
       percentage: 98.0,
       badge: "Overall School & Commerce Topper",
-      photo: "https://imgh.in/host/pwldtz",
+      photo: "https://imgh.in/host/hb8pnw",
       highlights: ["99/100 in Business Studies & Economics", "99/100 in Entrepreneurship"]
     },
     {
@@ -63,7 +63,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "HUM",
       percentage: 96.8,
       badge: "Humanities Stream Topper",
-      photo: "https://imgh.in/host/uiek8k",
+      photo: "https://imgh.in/host/i2yzz6",
       highlights: ["100/100 in Painting", "98/100 in Geography", "97/100 in History"]
     },
     {
@@ -73,7 +73,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "HUM",
       percentage: 96.2,
       badge: "Humanities 2nd Ranker",
-      photo: "https://imgh.in/host/buhbrq",
+      photo: "https://imgh.in/host/i2yzz6",
       highlights: ["100/100 in Painting", "98/100 in English Core"]
     }
   ];
@@ -184,7 +184,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "HUM",
       percentage: 98.6,
       badge: "Overall School Topper",
-      photo: "https://imgh.in/host/k187ox",
+      photo: "https://imgh.in/host/hb8pnw",
       highlights: ["100/100 in English Core", "100/100 in Political Science"]
     },
     {
@@ -194,7 +194,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "COM",
       percentage: 97.6,
       badge: "Commerce Stream Topper",
-      photo: "https://imgh.in/host/epait3",
+      photo: "https://imgh.in/host/i2yzz6",
       highlights: ["99/100 in Economics", "98/100 in Accountancy & Business Studies"]
     },
     {
@@ -204,7 +204,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "PCB",
       percentage: 95.8,
       badge: "Science Stream Topper",
-      photo: "https://imgh.in/host/kq97g7",
+      photo: "https://imgh.in/host/i2yzz6",
       highlights: ["100/100 in Painting", "94/100 in Biology"]
     }
   ];

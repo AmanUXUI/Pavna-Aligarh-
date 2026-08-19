@@ -53,10 +53,10 @@ export const FacultyPage: React.FC = () => {
       name: "English",
       description: "Fostering linguistic fluency, literary critique, and expressive communication.",
       members: [
-        { name: "Arushi Jain", isHOD: true, designation: "Head of Department (HOD)" },
-        { name: "Smita Ray", designation: "PGT English" },
-        { name: "Savitri Singh", designation: "TGT English" },
-        { name: "Jyoti Sharma", designation: "TGT English" },
+        { name: "Ms. Ari-Ishi Jain", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/a40g6f" },
+        { name: "Ms. Smita Ghosh", designation: "PGT English", image: "https://imgh.in/host/2iqywe" },
+        { name: "Ms. Savitri Singh", designation: "TGT English", image: "https://imgh.in/host/8qg65t" },
+        { name: "Ms. Jyoti Sharma", designation: "TGT English", image: "https://imgh.in/host/rn6lf0" },
         { name: "Sakshi Upadhyay", designation: "PRT English" }
       ]
     },
