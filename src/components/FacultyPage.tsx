@@ -44,7 +44,7 @@ export const FacultyPage: React.FC = () => {
     qualification: "M.A., B.Ed., Educational Leadership Specialist",
     experience: "25+ Years in Academic Administration",
     message: "I am privileged to lead Pavna School, Aligarh (formerly DPS Aligarh). Built on a rich tradition of academic excellence, we continuously embrace modern, conceptual learning to empower every student.",
-    image: DEFAULT_AVATAR
+    image: "https://imgh.in/host/pogh06"
   };
 
   const departmentsData: Department[] = [
@@ -160,17 +160,17 @@ export const FacultyPage: React.FC = () => {
       name: "Mother Teacher",
       description: "Providing gentle guidance, foundational care, and holistic early childhood education.",
       members: [
-        { name: "Akanksha Jain", isHOD: true, designation: "Head of Department (HOD)" },
-        { name: "Neeru Gupta", designation: "Primary Educator" },
-        { name: "Kriti Dwivedi", designation: "Primary Educator" },
-        { name: "Shalini Singh", designation: "Primary Educator" },
-        { name: "Himanshi Sharma", designation: "Primary Educator" },
-        { name: "Priyanshi Mahawar", designation: "Primary Educator" },
-        { name: "Nisha Sharma", designation: "Primary Educator" },
-        { name: "Vandana Vermani", designation: "Primary Educator" },
-        { name: "Ms. Pallavi Mudgal", designation: "Primary Educator" },
-        { name: "Ms. Radhika Uppal", designation: "Primary Educator" },
-        { name: "Ms. Yagya Vashishtha", designation: "Primary Educator" }
+        { name: "Akanksha Jain", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/cxc5u1" },
+        { name: "Neeru Gupta", designation: "Primary Educator", image: "https://imgh.in/host/94y26e" },
+        { name: "Kriti Dwivedi", designation: "Primary Educator", image: "https://imgh.in/host/tvi00w" },
+        { name: "Shalini Singh", designation: "Primary Educator", image: "https://imgh.in/host/gglw9a" },
+        { name: "Himanshi Sharma", designation: "Primary Educator", image: "https://imgh.in/host/t90kef" },
+        { name: "Priyanshi Mahawar", designation: "Primary Educator", image: "https://imgh.in/host/z52cd0" },
+        { name: "Nisha Sharma", designation: "Primary Educator", image: "https://imgh.in/host/35hf22" },
+        { name: "Vandana Vermani", designation: "Primary Educator", image: "https://imgh.in/host/wdy6wd" },
+        { name: "Ms. Pallavi Mudgal", designation: "Primary Educator", image: "https://imgh.in/host/mdgirq" },
+        { name: "Ms. Radhika Uppal", designation: "Primary Educator", image: "https://imgh.in/host/wvodsw" },
+        { name: "Ms. Yagya Vashishtha", designation: "Primary Educator", image: "https://imgh.in/host/vusgwk" }
       ]
     },
     {
@@ -178,10 +178,10 @@ export const FacultyPage: React.FC = () => {
       name: "History / SST",
       description: "Exploring heritage, civics, global history, geography, and social awareness.",
       members: [
-        { name: "Navin Chandra Jha", isHOD: true, designation: "Head of Department (HOD)" },
+        { name: "Navin Chandra Jha", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/m0tlg4" },
         { name: "Mr. Shiv Kumar", designation: "TGT Social Studies" },
-        { name: "Nabila Khan", designation: "TGT History" },
-        { name: "Nirbhay Jha", designation: "TGT Geography & Civics" }
+        { name: "Nabila Khan", designation: "TGT History", image: "https://imgh.in/host/m4k5t8" },
+        { name: "Nirbhay Jha", designation: "TGT Geography & Civics", image: "https://imgh.in/host/cegvdc" }
       ]
     },
     {
@@ -189,7 +189,7 @@ export const FacultyPage: React.FC = () => {
       name: "Counselor",
       description: "Offering student mental wellness, career guidance, emotional support, and guidance.",
       members: [
-        { name: "Azra Tabassum", isHOD: true, designation: "Head of Department (HOD) - Student Counselor" }
+        { name: "Azra Tabassum", isHOD: true, designation: "Head of Department (HOD) - Student Counselor", image: "https://imgh.in/host/siudo8" }
       ]
     }
   ];
