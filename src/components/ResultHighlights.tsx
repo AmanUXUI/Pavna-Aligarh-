@@ -209,6 +209,8 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   ];
 
+  const DEFAULT_AVATAR = "https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg";
+
   // Top 3 Toppers Class X (2024-25)
   const top3Toppers10th = [
     {
@@ -218,7 +220,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "GEN",
       percentage: 97.3,
       badge: "Overall Class X Topper",
-      photo: "https://imgh.in/host/hb8pnw",
+      photo: DEFAULT_AVATAR,
       highlights: ["100/100 in Science", "98/100 in Social Science"]
     },
     {
@@ -228,7 +230,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "GEN",
       percentage: 96.5,
       badge: "Class X 2nd Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: DEFAULT_AVATAR,
       highlights: ["100/100 in Information Technology"]
     },
     {
@@ -238,7 +240,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "GEN",
       percentage: 95.5,
       badge: "Class X 3rd Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: DEFAULT_AVATAR,
       highlights: ["100/100 in Science & IT", "99/100 in Mathematics"]
     }
   ];
@@ -258,7 +260,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     { label: "Pass Percentage", value: "100%", unit: "Pass Rate", icon: CheckCircle2 },
     { label: "Scored Above 90%", value: "13", unit: "18.1% Students", icon: Star },
     { label: "Scored Above 80%", value: "38", unit: "52.8% Students", icon: Award },
-    { label: "Scored Above 60%", value: "64", unit: "88.9% Students", icon: TrendingUp },
+    { label: "Scored Above 60%", value: "68", unit: "94.4% Students", icon: TrendingUp },
     { label: "School Average", value: "77.7%", unit: "Overall Avg", icon: GraduationCap },
   ];
 
@@ -280,7 +282,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "HUM",
       percentage: 99.2,
       badge: "Overall School & Humanities Topper",
-      photo: "https://imgh.in/host/hb8pnw",
+      photo: DEFAULT_AVATAR,
       highlights: ["100/100 in History, Economics & Pol. Science", "99/100 in Informatics Practices"]
     },
     {
@@ -290,7 +292,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "COM",
       percentage: 97.8,
       badge: "Commerce Stream Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: DEFAULT_AVATAR,
       highlights: ["100/100 in Accountancy", "99/100 in Business Studies", "97/100 in English"]
     },
     {
@@ -300,7 +302,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "PCB",
       percentage: 97.0,
       badge: "Science Stream Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: DEFAULT_AVATAR,
       highlights: ["100/100 in Painting", "99/100 in Chemistry", "97/100 in Physics"]
     }
   ];
@@ -433,7 +435,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "GEN",
       percentage: 97.2,
       badge: "Overall Class X Topper",
-      photo: "https://imgh.in/host/hb8pnw",
+      photo: DEFAULT_AVATAR,
       highlights: ["100/100 in Social Science", "100/100 in Sanskrit"]
     },
     {
@@ -443,7 +445,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "GEN",
       percentage: 97.0,
       badge: "Class X 2nd Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: DEFAULT_AVATAR,
       highlights: ["98/100 in Science"]
     },
     {
@@ -453,7 +455,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       streamCode: "GEN",
       percentage: 96.0,
       badge: "Class X 3rd Topper",
-      photo: "https://imgh.in/host/i2yzz6",
+      photo: DEFAULT_AVATAR,
       highlights: ["98/100 in English Lang & Lit."]
     }
   ];
