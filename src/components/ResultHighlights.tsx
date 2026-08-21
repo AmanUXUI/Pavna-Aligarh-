@@ -20,7 +20,7 @@ interface ResultHighlightsProps {
 
 export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, setActiveTab }) => {
   const [selectedClass, setSelectedClass] = useState<'12th' | '10th'>('12th');
-  const [activeSessionTab, setActiveSessionTab] = useState<'2024-25' | '2025-26' | '2026-27'>('2025-26');
+  const [activeSessionTab, setActiveSessionTab] = useState<'2024-25' | '2025-26' | '2023-24'>('2025-26');
   const [streamFilter, setStreamFilter] = useState<string>('ALL');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [subView, setSubView] = useState<'overall' | 'toppers' | 'subjects'>('overall');
@@ -209,7 +209,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   ];
 
-  // Top 3 Toppers Class X
+  // Top 3 Toppers Class X (2024-25)
   const top3Toppers10th = [
     {
       rank: 1,
@@ -262,16 +262,294 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     { label: "School Average", value: "77.7%", unit: "Overall Avg", icon: GraduationCap },
   ];
 
+  // ----------------2023-24 DATA (CLASS XII)----------------
+  const summaryStats2023_24_12th = [
+    { label: "Total Appeared", value: "77", unit: "Students", icon: Users },
+    { label: "Pass Percentage", value: "100%", unit: "Pass Rate", icon: CheckCircle2 },
+    { label: "Scored Above 90%", value: "23", unit: "29.87% Students", icon: Star },
+    { label: "Scored Above 80%", value: "47", unit: "61.04% Students", icon: Award },
+    { label: "Scored Above 60%", value: "75", unit: "97.40% Students", icon: TrendingUp },
+    { label: "School Average", value: "81.4%", unit: "Overall Avg", icon: GraduationCap },
+  ];
+
+  const top3Toppers2023_24_12th = [
+    {
+      rank: 1,
+      name: "LAKSHYA BHARADWAJ",
+      stream: "Humanities",
+      streamCode: "HUM",
+      percentage: 99.2,
+      badge: "Overall School & Humanities Topper",
+      photo: "https://imgh.in/host/hb8pnw",
+      highlights: ["100/100 in History, Economics & Pol. Science", "99/100 in Informatics Practices"]
+    },
+    {
+      rank: 2,
+      name: "ANANDIKA MITTAL",
+      stream: "Commerce",
+      streamCode: "COM",
+      percentage: 97.8,
+      badge: "Commerce Stream Topper",
+      photo: "https://imgh.in/host/i2yzz6",
+      highlights: ["100/100 in Accountancy", "99/100 in Business Studies", "97/100 in English"]
+    },
+    {
+      rank: 3,
+      name: "TUSHAR VIKRAM SINGH",
+      stream: "Medical (PCB)",
+      streamCode: "PCB",
+      percentage: 97.0,
+      badge: "Science Stream Topper",
+      photo: "https://imgh.in/host/i2yzz6",
+      highlights: ["100/100 in Painting", "99/100 in Chemistry", "97/100 in Physics"]
+    }
+  ];
+
+  const toppers2023_24_12th: TopperStudent[] = [
+    { sNo: 1, name: "LAKSHYA BHARADWAJ", stream: "HUM", percentage: 99.2 },
+    { sNo: 2, name: "ANANDIKA MITTAL", stream: "COM", percentage: 97.8 },
+    { sNo: 3, name: "TUSHAR VIKRAM SINGH", stream: "PCB", percentage: 97.0 },
+    { sNo: 4, name: "PRIYANSHI GUPTA", stream: "PCM", percentage: 95.8 },
+    { sNo: 5, name: "SANSKAR SAKET VARSHNEY", stream: "COM", percentage: 95.8 },
+    { sNo: 6, name: "ASMII VARSHNEY", stream: "PCM", percentage: 95.6 },
+    { sNo: 7, name: "KRISHNA VASHISHT", stream: "PCB", percentage: 95.6 },
+    { sNo: 8, name: "ALOK RANJAN SINGH", stream: "HUM", percentage: 95.6 },
+    { sNo: 9, name: "ANUSHKA GUPTA", stream: "PCM", percentage: 94.2 },
+    { sNo: 10, name: "SAMARTH GOYAL", stream: "PCM", percentage: 94.0 },
+    { sNo: 11, name: "KRISH RATHI", stream: "COM", percentage: 93.2 },
+    { sNo: 12, name: "SHUBH YADAV", stream: "PCM", percentage: 92.8 },
+    { sNo: 13, name: "JISHANT SENGAR", stream: "PCB", percentage: 92.6 },
+    { sNo: 14, name: "ASHIMA GARG", stream: "HUM", percentage: 92.4 },
+    { sNo: 15, name: "GAURI SINGH JADAUN", stream: "HUM", percentage: 92.2 },
+    { sNo: 16, name: "UTKARSH SINGH SENGAR", stream: "HUM", percentage: 92.0 },
+    { sNo: 17, name: "PRATYUSH KUMAR SHARMA", stream: "PCM", percentage: 91.8 },
+    { sNo: 18, name: "PRANAV MITTAL", stream: "COM", percentage: 91.6 },
+    { sNo: 19, name: "ANMOL VARSHNEY", stream: "COM", percentage: 91.4 },
+    { sNo: 20, name: "DAKSH MISHRA", stream: "PCM", percentage: 91.0 },
+    { sNo: 21, name: "SIDDHI GUPTA", stream: "HUM", percentage: 91.0 },
+    { sNo: 22, name: "AADI JAIN", stream: "COM", percentage: 90.2 },
+    { sNo: 23, name: "UTKARSH ATTRI", stream: "HUM", percentage: 90.2 },
+  ];
+
+  const subjectToppers2023_24_12th: SubjectTopper[] = [
+    {
+      subject: "English Core",
+      toppers: [
+        { name: "LAKSHYA BHARADWAJ", marks: 97 },
+        { name: "ANANDIKA MITTAL", marks: 97 }
+      ]
+    },
+    {
+      subject: "Physics",
+      toppers: [{ name: "TUSHAR VIKRAM SINGH", marks: 97 }]
+    },
+    {
+      subject: "Chemistry",
+      toppers: [{ name: "TUSHAR VIKRAM SINGH", marks: 99 }]
+    },
+    {
+      subject: "Mathematics",
+      toppers: [{ name: "ASMII VARSHNEY", marks: 98 }]
+    },
+    {
+      subject: "Biology",
+      toppers: [{ name: "JISHANT SENGAR", marks: 95 }]
+    },
+    {
+      subject: "Physical Education",
+      toppers: [{ name: "TANUSHKA RAGHAV", marks: 99 }]
+    },
+    {
+      subject: "Accountancy",
+      toppers: [{ name: "ANANDIKA MITTAL", marks: 100 }]
+    },
+    {
+      subject: "Business Studies",
+      toppers: [{ name: "ANANDIKA MITTAL", marks: 99 }]
+    },
+    {
+      subject: "Economics",
+      toppers: [{ name: "LAKSHYA BHARADWAJ", marks: 100 }]
+    },
+    {
+      subject: "Informatics Practices",
+      toppers: [{ name: "LAKSHYA BHARADWAJ", marks: 99 }]
+    },
+    {
+      subject: "Computer Science",
+      toppers: [{ name: "ASMII VARSHNEY", marks: 95 }]
+    },
+    {
+      subject: "History",
+      toppers: [{ name: "LAKSHYA BHARADWAJ", marks: 100 }]
+    },
+    {
+      subject: "Geography",
+      toppers: [{ name: "UTKARSH SINGH SENGAR", marks: 97 }]
+    },
+    {
+      subject: "Entrepreneurship",
+      toppers: [{ name: "ANMOL VARSHNEY", marks: 98 }]
+    },
+    {
+      subject: "Political Science",
+      toppers: [
+        { name: "LAKSHYA BHARADWAJ", marks: 100 },
+        { name: "UTKARSH SINGH SENGAR", marks: 100 }
+      ]
+    },
+    {
+      subject: "Painting",
+      toppers: [
+        { name: "TUSHAR VIKRAM SINGH", marks: 100 },
+        { name: "ANUSHKA GUPTA", marks: 100 },
+        { name: "ASHIMA GARG", marks: 100 },
+        { name: "UTKARSH ATTRI", marks: 100 },
+        { name: "AANYA AGRAWAL", marks: 100 },
+        { name: "AKANKSHA SINGH", marks: 100 }
+      ]
+    },
+    {
+      subject: "Dance",
+      toppers: [{ name: "KRISHNA VASHISHT", marks: 99 }]
+    }
+  ];
+
+  // ----------------2023-24 DATA (CLASS X)----------------
+  const summaryStats2023_24_10th = [
+    { label: "Total Appeared", value: "81", unit: "Students", icon: Users },
+    { label: "Pass Percentage", value: "100%", unit: "Pass Rate", icon: CheckCircle2 },
+    { label: "Scored Above 90%", value: "27", unit: "33.30% Students", icon: Star },
+    { label: "Scored Above 80%", value: "54", unit: "66.70% Students", icon: Award },
+    { label: "Scored Above 60%", value: "76", unit: "93.83% Students", icon: TrendingUp },
+    { label: "School Average", value: "82.1%", unit: "82.10% Avg", icon: GraduationCap },
+  ];
+
+  const top3Toppers2023_24_10th = [
+    {
+      rank: 1,
+      name: "KARTIK RAGHAV",
+      stream: "Class X General",
+      streamCode: "GEN",
+      percentage: 97.2,
+      badge: "Overall Class X Topper",
+      photo: "https://imgh.in/host/hb8pnw",
+      highlights: ["100/100 in Social Science", "100/100 in Sanskrit"]
+    },
+    {
+      rank: 2,
+      name: "MOHIT VARSHNEY",
+      stream: "Class X General",
+      streamCode: "GEN",
+      percentage: 97.0,
+      badge: "Class X 2nd Topper",
+      photo: "https://imgh.in/host/i2yzz6",
+      highlights: ["98/100 in Science"]
+    },
+    {
+      rank: 3,
+      name: "DIVY VARSHNEY",
+      stream: "Class X General",
+      streamCode: "GEN",
+      percentage: 96.0,
+      badge: "Class X 3rd Topper",
+      photo: "https://imgh.in/host/i2yzz6",
+      highlights: ["98/100 in English Lang & Lit."]
+    }
+  ];
+
+  const toppers2023_24_10th: TopperStudent[] = [
+    { sNo: 1, name: "KARTIK RAGHAV", stream: "GEN", percentage: 97.2 },
+    { sNo: 2, name: "MOHIT VARSHNEY", stream: "GEN", percentage: 97.0 },
+    { sNo: 3, name: "DIVY VARSHNEY", stream: "GEN", percentage: 96.0 },
+    { sNo: 4, name: "AARUSH GODANI", stream: "GEN", percentage: 95.5 },
+    { sNo: 5, name: "JAY JINDAL", stream: "GEN", percentage: 95.5 },
+    { sNo: 6, name: "RAJAT SHARMA", stream: "GEN", percentage: 95.5 },
+    { sNo: 7, name: "SHUBH SENGER", stream: "GEN", percentage: 95.0 },
+    { sNo: 8, name: "DAKSH GUPTA KANTAK", stream: "GEN", percentage: 94.3 },
+    { sNo: 9, name: "JIYA SABLOK", stream: "GEN", percentage: 93.8 },
+    { sNo: 10, name: "LAKSHYA KUMAR SENGAR", stream: "GEN", percentage: 93.7 },
+    { sNo: 11, name: "MANYA RATHI", stream: "GEN", percentage: 93.7 },
+    { sNo: 12, name: "TANISHKA BANSAL", stream: "GEN", percentage: 93.5 },
+    { sNo: 13, name: "ISHIT SARASWAT", stream: "GEN", percentage: 93.2 },
+    { sNo: 14, name: "PULKIT DESHWAL", stream: "GEN", percentage: 93.2 },
+    { sNo: 15, name: "ROHIT JHA", stream: "GEN", percentage: 93.0 },
+    { sNo: 16, name: "PRANAV MEHRA", stream: "GEN", percentage: 92.8 },
+    { sNo: 17, name: "MADHVI RATHI", stream: "GEN", percentage: 92.7 },
+    { sNo: 18, name: "PARIDHI VARSHNEY", stream: "GEN", percentage: 92.5 },
+    { sNo: 19, name: "NAVYA JAIN", stream: "GEN", percentage: 92.3 },
+    { sNo: 20, name: "TANISHQ GUPTA", stream: "GEN", percentage: 92.0 },
+    { sNo: 21, name: "ARNAV YADAV", stream: "GEN", percentage: 91.8 },
+    { sNo: 22, name: "PRATYUSH SHARMA", stream: "GEN", percentage: 91.7 },
+    { sNo: 23, name: "RAGHAV SINGHAL", stream: "GEN", percentage: 91.7 },
+    { sNo: 24, name: "SHUBHITA SRIVASTAVA", stream: "GEN", percentage: 91.3 },
+    { sNo: 25, name: "KRISHAN MOHAN SARASWAT", stream: "GEN", percentage: 91.3 },
+    { sNo: 26, name: "SHREYA SAXENA", stream: "GEN", percentage: 90.5 },
+    { sNo: 27, name: "ANANYA KAMAL", stream: "GEN", percentage: 90.5 },
+  ];
+
+  const subjectToppers2023_24_10th: SubjectTopper[] = [
+    {
+      subject: "Mathematics",
+      toppers: [{ name: "SHUBH SENGER", marks: 97 }]
+    },
+    {
+      subject: "Computer Applications",
+      toppers: [{ name: "LAKSHYA KUMAR SENGAR", marks: 100 }]
+    },
+    {
+      subject: "Social Science",
+      toppers: [
+        { name: "KARTIK RAGHAV", marks: 100 },
+        { name: "ROHIT JHA", marks: 100 }
+      ]
+    },
+    {
+      subject: "English Lang & Lit.",
+      toppers: [
+        { name: "DIVY VARSHNEY", marks: 98 },
+        { name: "JAY JINDAL", marks: 98 },
+        { name: "TANISHKA BANSAL", marks: 98 },
+        { name: "ISHIT SARASWAT", marks: 98 }
+      ]
+    },
+    {
+      subject: "Hindi Course - B",
+      toppers: [{ name: "RAJAT SHARMA", marks: 98 }]
+    },
+    {
+      subject: "Science",
+      toppers: [{ name: "MOHIT VARSHNEY", marks: 98 }]
+    },
+    {
+      subject: "Sanskrit",
+      toppers: [
+        { name: "KARTIK RAGHAV", marks: 100 },
+        { name: "MADHVI RATHI", marks: 100 }
+      ]
+    },
+    {
+      subject: "Urdu",
+      toppers: [{ name: "NAVYA JAIN", marks: 93 }]
+    }
+  ];
+
   const summaryStats2024_25 = selectedClass === '10th' ? summaryStats10th : summaryStats12th;
 
   // Active dataset selection based on session tab and class
-  const summaryStatsActive = activeSessionTab === '2025-26'
-    ? (selectedClass === '10th' ? summaryStats10th : summaryStats2025_26_12th)
-    : summaryStats2024_25;
+  const summaryStatsActive = 
+    activeSessionTab === '2025-26'
+      ? (selectedClass === '10th' ? summaryStats10th : summaryStats2025_26_12th)
+      : activeSessionTab === '2023-24'
+      ? (selectedClass === '10th' ? summaryStats2023_24_10th : summaryStats2023_24_12th)
+      : summaryStats2024_25;
 
-  const top3ToppersActive = activeSessionTab === '2025-26'
-    ? (selectedClass === '10th' ? top3Toppers10th : top3Toppers2025_26_12th)
-    : (selectedClass === '10th' ? top3Toppers10th : top3Toppers12th);
+  const top3ToppersActive = 
+    activeSessionTab === '2025-26'
+      ? (selectedClass === '10th' ? top3Toppers10th : top3Toppers2025_26_12th)
+      : activeSessionTab === '2023-24'
+      ? (selectedClass === '10th' ? top3Toppers2023_24_10th : top3Toppers2023_24_12th)
+      : (selectedClass === '10th' ? top3Toppers10th : top3Toppers12th);
 
   useEffect(() => {
     setCurrentSlide(0);
@@ -446,13 +724,19 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   ];
 
-  const toppersActive = activeSessionTab === '2025-26'
-    ? (selectedClass === '10th' ? toppers10th : toppers2025_26_12th)
-    : (selectedClass === '10th' ? toppers10th : toppers12th);
+  const toppersActive = 
+    activeSessionTab === '2025-26'
+      ? (selectedClass === '10th' ? toppers10th : toppers2025_26_12th)
+      : activeSessionTab === '2023-24'
+      ? (selectedClass === '10th' ? toppers2023_24_10th : toppers2023_24_12th)
+      : (selectedClass === '10th' ? toppers10th : toppers12th);
 
-  const subjectToppersActive = activeSessionTab === '2025-26'
-    ? (selectedClass === '10th' ? subjectToppers10th : subjectToppers2025_26_12th)
-    : (selectedClass === '10th' ? subjectToppers10th : subjectToppers12th);
+  const subjectToppersActive = 
+    activeSessionTab === '2025-26'
+      ? (selectedClass === '10th' ? subjectToppers10th : subjectToppers2025_26_12th)
+      : activeSessionTab === '2023-24'
+      ? (selectedClass === '10th' ? subjectToppers2023_24_10th : subjectToppers2023_24_12th)
+      : (selectedClass === '10th' ? subjectToppers10th : subjectToppers12th);
 
   const getStreamBadgeColor = (stream: string) => {
     switch (stream) {
@@ -567,21 +851,22 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
             </button>
 
             <button
-              onClick={() => setActiveSessionTab('2026-27')}
+              onClick={() => setActiveSessionTab('2023-24')}
               className={`px-5 py-2.5 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer whitespace-nowrap flex items-center gap-2 ${
-                activeSessionTab === '2026-27'
+                activeSessionTab === '2023-24'
                   ? 'bg-[#201A5B] text-white shadow-sm'
                   : 'text-slate-600 hover:text-[#201A5B] hover:bg-slate-50'
               }`}
             >
-              <span>RESULT HIGHLIGHTS 2026–27</span>
-              <span className="bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.5 rounded font-bold">Ongoing Session</span>
+              <Award className="w-4 h-4 text-[#f48120]" />
+              <span>RESULT HIGHLIGHTS 2023–24</span>
+              <span className="bg-[#f48120] text-white text-[10px] px-1.5 py-0.5 rounded font-bold">100% Pass</span>
             </button>
           </div>
         </div>
 
-        {/* Tab Content 1 & 2: 2025-26 & 2024-25 Data Views */}
-        {(activeSessionTab === '2025-26' || activeSessionTab === '2024-25') && (
+        {/* Tab Content: Session Data Views */}
+        {(activeSessionTab === '2025-26' || activeSessionTab === '2024-25' || activeSessionTab === '2023-24') && (
           <div className="space-y-8 animate-in fade-in duration-300">
             
             {/* Top Stat Summary Cards */}
@@ -916,25 +1201,6 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
               </div>
             )}
 
-          </div>
-        )}
-
-        {/* Tab Content 3: 2026-27 (Ongoing Session Notice) */}
-        {activeSessionTab === '2026-27' && (
-          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 text-center space-y-4 max-w-2xl mx-auto shadow-xs animate-in fade-in duration-300">
-            <div className="w-16 h-16 rounded-2xl bg-slate-50 text-[#201A5B] flex items-center justify-center mx-auto border border-slate-200">
-              <Award className="w-8 h-8 text-[#f48120]" />
-            </div>
-            <h3 className="text-xl font-bold text-slate-900">Academic Session 2026–27 Class XII Progress</h3>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Academic Session 2026–27 is currently in progress. Students are undergoing continuous assessment through Periodic Tests, Practicals, and Pre-Board preparatory examinations aligned with the CBSE curriculum.
-            </p>
-            <div className="pt-2">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#201A5B] bg-slate-50 px-4 py-2 rounded-full border border-slate-200">
-                <Users className="w-3.5 h-3.5 text-[#f48120]" />
-                <span>Track Term Progress via Parent Portal</span>
-              </span>
-            </div>
           </div>
         )}
 
