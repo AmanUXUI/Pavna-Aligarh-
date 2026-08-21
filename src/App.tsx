@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ResultHighlights } from './components/ResultHighlights';
+import { StudentCouncil } from './components/StudentCouncil';
 import { FacultyPage } from './components/FacultyPage';
 import { BeyondAcademicsPage } from './components/BeyondAcademicsPage';
 import { LoginModal } from './components/LoginModal';
@@ -29,6 +30,14 @@ export default function App() {
           <FacultyPage />
         ) : activeTab === 'beyond-academics' ? (
           <BeyondAcademicsPage />
+        ) : activeTab === 'student-council' ? (
+          <>
+            <Hero 
+              title="Student Council" 
+              subtitle="Empowering student voices, cultivating visionary leadership, and driving positive school community initiatives." 
+            />
+            <StudentCouncil activeTab={activeTab} setActiveTab={setActiveTab} />
+          </>
         ) : (
           <>
             {/* Hero Section */}

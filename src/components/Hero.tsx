@@ -2,9 +2,14 @@ import React from 'react';
 
 interface HeroProps {
   onSelectStage?: (stageId: string) => void;
+  title?: string;
+  subtitle?: string;
 }
 
-export const Hero: React.FC<HeroProps> = () => {
+export const Hero: React.FC<HeroProps> = ({
+  title = "Result Highlights",
+  subtitle = "Explore Pavna School's academic excellence, CBSE board examination toppers, stream highlights, and holistic achievements."
+}) => {
   return (
     <div className="relative overflow-hidden h-[450px] sm:h-[520px] md:h-[600px] flex items-center bg-[#201A5B] shadow-md">
       {/* Background Image */}
@@ -29,7 +34,7 @@ export const Hero: React.FC<HeroProps> = () => {
               wordSpacing: '0px'
             }}
           >
-            Result Highlights
+            {title}
           </h1>
           <p 
             className="mt-3 sm:mt-4 text-white font-medium"
@@ -38,7 +43,7 @@ export const Hero: React.FC<HeroProps> = () => {
               lineHeight: '27px'
             }}
           >
-            Explore Pavna School's academic excellence, CBSE board examination toppers, stream highlights, and holistic achievements.
+            {subtitle}
           </p>
         </div>
       </div>

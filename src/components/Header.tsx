@@ -14,6 +14,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenLogin, activeTab, setActiv
   const navLinks = [
     { label: "Home", id: "home" },
     { label: "Student Results", id: "student-results" },
+    { label: "Student Council", id: "student-council" },
     { label: "Faculty", id: "faculty" },
     { label: "Beyond Academics", id: "beyond-academics" }
   ];
