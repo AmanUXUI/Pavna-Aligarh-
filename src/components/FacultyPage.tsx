@@ -77,10 +77,10 @@ export const FacultyPage: React.FC = () => {
       name: "Mathematics",
       description: "Building strong analytical reasoning, problem-solving skills, and numerical logic.",
       members: [
-        { name: "Binod Kumar Sharma", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/h8juun" },
-        { name: "Seema Maheshwari", designation: "PGT Mathematics", image: "https://imgh.in/host/ohqk2c" },
-        { name: "Priti Shah", designation: "TGT Mathematics", image: "https://imgh.in/host/jmzw57" },
-        { name: "Tanvi Joshi", designation: "TGT Mathematics", image: "https://imgh.in/host/m5ka50" }
+        { name: "Binod Kumar Sharma", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/q7usfc" },
+        { name: "Seema Maheshwari", designation: "PGT Mathematics", image: "https://imgh.in/host/zint35" },
+        { name: "Priti Shah", designation: "TGT Mathematics", image: "https://imgh.in/host/cn0n05" },
+        { name: "Tanvi Joshi", designation: "TGT Mathematics", image: "https://imgh.in/host/cvdi8w" }
       ]
     },
     {
@@ -88,9 +88,9 @@ export const FacultyPage: React.FC = () => {
       name: "Commerce",
       description: "Nurturing future business leaders, financial strategists, and economic thinkers.",
       members: [
-        { name: "Intisar Ahmad", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/bcsiqn" },
-        { name: "Syed Mubashir Ali", designation: "PGT Accountancy & Business Studies", image: "https://imgh.in/host/sg9l65" },
-        { name: "Rajesh", designation: "PGT Economics", image: "https://imgh.in/host/j4k78f" }
+        { name: "Intisar Ahmad", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/tgymf8" },
+        { name: "Syed Mubashir Ali", designation: "PGT Accountancy & Business Studies", image: "https://imgh.in/host/6yz8h1" },
+        { name: "Rajesh", designation: "PGT Economics", image: "https://imgh.in/host/lqpjra" }
       ]
     },
     {
