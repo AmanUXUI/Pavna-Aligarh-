@@ -7,8 +7,8 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({
-  title = "Result Highlights",
-  subtitle = "Explore Pavna School's academic excellence, CBSE board examination toppers, stream highlights, and holistic achievements."
+  title = "A Legacy of Academic Excellence",
+  subtitle = "Celebrating Pavna School’s Academic Excellence, CBSE Board Toppers, Outstanding Stream-wise Performance"
 }) => {
   return (
     <div className="relative overflow-hidden h-[450px] sm:h-[520px] md:h-[600px] flex items-center bg-[#201A5B] shadow-md">

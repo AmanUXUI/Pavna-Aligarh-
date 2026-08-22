@@ -894,17 +894,13 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-6">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#f48120] bg-orange-50 px-3.5 py-1 rounded-full border border-orange-200/60 inline-block mb-2.5">
-            Academic Excellence & CBSE Performance
-          </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#201A5B] tracking-tight">
-            {selectedClass === '10th' ? 'Class X Board Result Highlights' : 'Class XII Board Result Highlights'}
+            {selectedClass === '10th' 
+              ? 'Celebrating Academic & CBSE Excellence Class X Board Result' 
+              : 'Celebrating Academic & CBSE Excellence Class XII Board Result'}
           </h2>
           <p className="mt-2 text-sm text-slate-600">
-            {selectedClass === '10th' 
-              ? "Celebrating our Class X students' outstanding academic achievements, subject mastery, and exemplary performance in CBSE Secondary School Examinations."
-              : "Celebrating our students' outstanding academic achievements, subject mastery, and exemplary performance in CBSE Senior School Certificate Examinations."
-            }
+            Academic Excellence, Subject Mastery & Remarkable Achievements
           </p>
         </div>
 

@@ -45,7 +45,7 @@ export const FacultyPage: React.FC = () => {
     qualification: "M.A., B.Ed., Educational Leadership Specialist",
     experience: "25+ Years in Academic Administration",
     message: "I am privileged to lead Pavna School, Aligarh (formerly DPS Aligarh). Built on a rich tradition of academic excellence, we continuously embrace modern, conceptual learning to empower every student.",
-    image: "https://imgh.in/host/pogh06"
+    image: "https://imgh.in/host/m9qt7j"
   };
 
   const departmentsData: Department[] = [
