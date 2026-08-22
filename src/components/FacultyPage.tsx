@@ -65,11 +65,11 @@ export const FacultyPage: React.FC = () => {
       name: "Hindi & TL",
       description: "Promoting cultural literature, language proficiency, and third-language learning.",
       members: [
-        { name: "Brajesh Kumar", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/cr467o" },
-        { name: "Sateesh Jain", designation: "PGT Hindi", image: "https://imgh.in/host/2z9vxf" },
-        { name: "Perwez Alam", designation: "TGT Language Specialist", image: "https://imgh.in/host/m400yo" },
-        { name: "Mohd Uzair", designation: "TGT Language Specialist", image: "https://imgh.in/host/tfycj5" },
-        { name: "Isra Tariq", designation: "TGT Language Specialist", image: "https://imgh.in/host/yzj8al" }
+        { name: "Brajesh Kumar", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/r90hi3" },
+        { name: "Sateesh Jain", designation: "PGT Hindi", image: "https://imgh.in/host/l07j8y" },
+        { name: "Perwez Alam", designation: "TGT Language Specialist", image: "https://imgh.in/host/wx1x1k" },
+        { name: "Mohd Uzair", designation: "TGT Language Specialist", image: "https://imgh.in/host/cvm3n6" },
+        { name: "Isra Tariq", designation: "TGT Language Specialist", image: "https://imgh.in/host/8xoy6q" }
       ]
     },
     {
