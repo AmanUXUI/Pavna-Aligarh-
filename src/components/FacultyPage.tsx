@@ -136,12 +136,12 @@ export const FacultyPage: React.FC = () => {
       description: "Cultivating aesthetic expression, musical harmony, performing arts, and creativity.",
       members: [
         { name: "Deepa Khare", isHOD: true, designation: "Head of Department (HOD)" },
-        { name: "Amit Upadhyay", designation: "Music Instructor", image: "https://imgh.in/host/yar9sz" },
+        { name: "Amit Upadhyay", designation: "Music Instructor", image: "https://imgh.in/host/xr4d7f" },
         { name: "Suman Singh", designation: "Dance Instructor" },
-        { name: "Sukanth Kumar", designation: "Fine Arts Instructor", image: "https://imgh.in/host/hcwx2l" },
-        { name: "Pratap Biswal", designation: "Performing Arts Teacher", image: "https://imgh.in/host/2ydxln" },
+        { name: "Sukanth Kumar", designation: "Fine Arts Instructor", image: "https://imgh.in/host/wavuqn" },
+        { name: "Pratap Biswal", designation: "Performing Arts Teacher", image: "https://imgh.in/host/rz1wgg" },
         { name: "R. K. Saxena (R)", designation: "Senior Arts Educator" },
-        { name: "Ms. Komal Verma", designation: "Arts & Crafts Educator", image: "https://imgh.in/host/o01nda" }
+        { name: "Ms. Komal Verma", designation: "Arts & Crafts Educator", image: "https://imgh.in/host/p16a4j" }
       ]
     },
     {
@@ -149,9 +149,9 @@ export const FacultyPage: React.FC = () => {
       name: "Sports / PHE",
       description: "Instilling physical fitness, athletic skill, teamwork, and healthy lifestyle habits.",
       members: [
-        { name: "Arindam K. Chakraborty", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/hxomgw" },
-        { name: "Samvedna", designation: "Sports & Fitness Instructor", image: "https://imgh.in/host/zecdli" },
-        { name: "Sarvjeet Singh", designation: "Physical Education Educator", image: "https://imgh.in/host/g5lzz8" },
+        { name: "Arindam K. Chakraborty", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/ukdmgh" },
+        { name: "Samvedna", designation: "Sports & Fitness Instructor", image: "https://imgh.in/host/8ai9vt" },
+        { name: "Sarvjeet Singh", designation: "Physical Education Educator", image: "https://imgh.in/host/ljpk0b" },
         { name: "Mohini Gautam", designation: "Sports Instructor" },
         { name: "Mohd. Faizan", designation: "Sports Instructor" }
       ]
