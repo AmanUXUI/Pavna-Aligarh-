@@ -179,10 +179,10 @@ export const FacultyPage: React.FC = () => {
       name: "History / SST",
       description: "Exploring heritage, civics, global history, geography, and social awareness.",
       members: [
-        { name: "Navin Chandra Jha", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/m0tlg4" },
+        { name: "Navin Chandra Jha", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/3rec0h" },
         { name: "Mr. Shiv Kumar", designation: "TGT Social Studies" },
-        { name: "Nabila Khan", designation: "TGT History", image: "https://imgh.in/host/m4k5t8" },
-        { name: "Nirbhay Jha", designation: "TGT Geography & Civics", image: "https://imgh.in/host/cegvdc" }
+        { name: "Nabila Khan", designation: "TGT History", image: "https://imgh.in/host/u69pcv" },
+        { name: "Nirbhay Jha", designation: "TGT Geography & Civics", image: "https://imgh.in/host/oujcbh" }
       ]
     },
     {
@@ -190,7 +190,7 @@ export const FacultyPage: React.FC = () => {
       name: "Counselor",
       description: "Offering student mental wellness, career guidance, emotional support, and guidance.",
       members: [
-        { name: "Azra Tabassum", isHOD: true, designation: "Head of Department (HOD) - Student Counselor", image: "https://imgh.in/host/siudo8" }
+        { name: "Azra Tabassum", isHOD: true, designation: "Head of Department (HOD) - Student Counselor", image: "https://imgh.in/host/e6t3rk" }
       ]
     }
   ];
