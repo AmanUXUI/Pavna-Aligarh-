@@ -98,7 +98,7 @@ export const FacultyPage: React.FC = () => {
       name: "Chemistry",
       description: "Exploring molecular science, chemical reactions, and practical laboratory inquiry.",
       members: [
-        { name: "Meha Mishra", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/48e6cu" },
+        { name: "Meha Mishra", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/vzrqfr" },
         { name: "Anuj Vashistha", designation: "PGT Chemistry" },
         { name: "Ms. Deeksha Mishra", designation: "TGT Chemistry" }
       ]
@@ -108,9 +108,9 @@ export const FacultyPage: React.FC = () => {
       name: "Computer",
       description: "Empowering technological literacy, computational thinking, and software skills.",
       members: [
-        { name: "Harshvardhan Thakur", designation: "PGT Computer Science", image: "https://imgh.in/host/wxuakc" },
-        { name: "Rajeev Kushwaha", designation: "TGT Information Technology", image: "https://imgh.in/host/ot2sj8" },
-        { name: "Sneh Lata", designation: "PRT Computer Science", image: "https://imgh.in/host/bh5r20" }
+        { name: "Harshvardhan Thakur", designation: "PGT Computer Science", image: "https://imgh.in/host/briu5x" },
+        { name: "Rajeev Kushwaha", designation: "TGT Information Technology", image: "https://imgh.in/host/1zk2ja" },
+        { name: "Sneh Lata", designation: "PRT Computer Science", image: "https://imgh.in/host/75n3yr" }
       ]
     },
     {
@@ -126,8 +126,8 @@ export const FacultyPage: React.FC = () => {
       name: "Physics",
       description: "Investigating natural phenomena, mechanics, optics, and experimental principles.",
       members: [
-        { name: "Alok Chaturvedi", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/3e1tw7" },
-        { name: "Sumedha Pathak", designation: "PGT Physics", image: "https://imgh.in/host/7ospa9" }
+        { name: "Alok Chaturvedi", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/b80wvm" },
+        { name: "Sumedha Pathak", designation: "PGT Physics", image: "https://imgh.in/host/261k27" }
       ]
     },
     {
