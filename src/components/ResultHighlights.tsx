@@ -35,6 +35,8 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   }, [activeTab]);
 
+  const DEFAULT_AVATAR = "https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg";
+
   // ----------------2025-26 DATA (CLASS XII)----------------
   const summaryStats2025_26_12th = [
     { label: "Total Appeared", value: "79", unit: "Students", icon: Users },
@@ -175,6 +177,125 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     }
   ];
 
+  // ----------------2025-26 DATA (CLASS X)----------------
+  const summaryStats2025_26_10th = [
+    { label: "Total Appeared", value: "81", unit: "Students", icon: Users },
+    { label: "Pass Percentage", value: "100%", unit: "Pass Rate", icon: CheckCircle2 },
+    { label: "Scored Above 90%", value: "31", unit: "38.20% Students", icon: Star },
+    { label: "Scored Above 80%", value: "60", unit: "74.07% Students", icon: Award },
+    { label: "Scored Above 60%", value: "81", unit: "100.00% Students", icon: TrendingUp },
+    { label: "School Average", value: "85.7%", unit: "Best 5 (Main: 82.0%)", icon: GraduationCap },
+  ];
+
+  const top3Toppers2025_26_10th = [
+    {
+      rank: 1,
+      name: "AJITA SHEKHAR",
+      stream: "Class X (Best 5)",
+      streamCode: "GEN",
+      percentage: 97.8,
+      badge: "Overall Class X Topper",
+      photo: DEFAULT_AVATAR,
+      highlights: ["99/100 in Social Science", "98/100 in Hindi Course-B"]
+    },
+    {
+      rank: 2,
+      name: "PARTH YADAV",
+      stream: "Class X (Best 5)",
+      streamCode: "GEN",
+      percentage: 97.6,
+      badge: "Class X 2nd Topper",
+      photo: DEFAULT_AVATAR,
+      highlights: ["100/100 in Mathematics", "99/100 in Computer Applications"]
+    },
+    {
+      rank: 3,
+      name: "GEYA GAUR",
+      stream: "Class X (Best 5)",
+      streamCode: "GEN",
+      percentage: 97.4,
+      badge: "Class X 3rd Topper",
+      photo: DEFAULT_AVATAR,
+      highlights: ["98/100 in Hindi Course-B", "Outstanding Best-5 Aggregate"]
+    }
+  ];
+
+  const toppers2025_26_10th: TopperStudent[] = [
+    { sNo: 1, name: "AJITA SHEKHAR", stream: "GEN", percentage: 97.8 },
+    { sNo: 2, name: "PARTH YADAV", stream: "GEN", percentage: 97.6 },
+    { sNo: 3, name: "GEYA GAUR", stream: "GEN", percentage: 97.4 },
+    { sNo: 4, name: "KIRTI SINGH", stream: "GEN", percentage: 96.8 },
+    { sNo: 5, name: "NIKUNJ MAHESHWARI", stream: "GEN", percentage: 96.2 },
+    { sNo: 6, name: "SURYANSH SOLANKI", stream: "GEN", percentage: 96.0 },
+    { sNo: 7, name: "PRASHANSA GUPTA", stream: "GEN", percentage: 95.6 },
+    { sNo: 8, name: "ANVY GUPTA", stream: "GEN", percentage: 94.2 },
+    { sNo: 9, name: "HARSHIT KUMAR", stream: "GEN", percentage: 93.8 },
+    { sNo: 10, name: "AANYA VARSHNEY", stream: "GEN", percentage: 93.8 },
+    { sNo: 11, name: "ARPITA GUPTA", stream: "GEN", percentage: 93.6 },
+    { sNo: 12, name: "AGRIMA SARASWAT", stream: "GEN", percentage: 93.2 },
+    { sNo: 13, name: "KANIKA GUPTA", stream: "GEN", percentage: 93.0 },
+    { sNo: 14, name: "AARAV YADAV", stream: "GEN", percentage: 93.0 },
+    { sNo: 15, name: "GURDEEP SINGH", stream: "GEN", percentage: 92.8 },
+    { sNo: 16, name: "KARAN YADAV", stream: "GEN", percentage: 92.6 },
+    { sNo: 17, name: "NAITIK AGRAWAL", stream: "GEN", percentage: 92.4 },
+    { sNo: 18, name: "GATI MAHESHWARI", stream: "GEN", percentage: 92.4 },
+    { sNo: 19, name: "CHIRAG MAHESHWARI", stream: "GEN", percentage: 92.0 },
+    { sNo: 20, name: "DEVANSH VARSHNEY", stream: "GEN", percentage: 92.0 },
+    { sNo: 21, name: "YASH AGARWAL", stream: "GEN", percentage: 91.8 },
+    { sNo: 22, name: "DIVYANSHI", stream: "GEN", percentage: 91.6 },
+    { sNo: 23, name: "ARHAAN SHAMSHAD", stream: "GEN", percentage: 91.4 },
+    { sNo: 24, name: "DIVYANSH AGRAWAL", stream: "GEN", percentage: 91.2 },
+    { sNo: 25, name: "SAMRAT SHARMA", stream: "GEN", percentage: 91.2 },
+    { sNo: 26, name: "PRAGATI SHARMA", stream: "GEN", percentage: 91.2 },
+    { sNo: 27, name: "AMAY SINGH", stream: "GEN", percentage: 91.0 },
+    { sNo: 28, name: "SANSKAR JAIN", stream: "GEN", percentage: 90.8 },
+    { sNo: 29, name: "MUDIT VARSHNEY", stream: "GEN", percentage: 90.6 },
+    { sNo: 30, name: "RUDRA PRATAP SINGH", stream: "GEN", percentage: 90.4 },
+    { sNo: 31, name: "ARNAV VARSHNEY", stream: "GEN", percentage: 90.2 },
+  ];
+
+  const subjectToppers2025_26_10th: SubjectTopper[] = [
+    {
+      subject: "Mathematics",
+      toppers: [{ name: "PARTH YADAV", marks: 100 }]
+    },
+    {
+      subject: "Computer Applications",
+      toppers: [{ name: "PARTH YADAV", marks: 99 }]
+    },
+    {
+      subject: "Social Science",
+      toppers: [
+        { name: "AJITA SHEKHAR", marks: 99 },
+        { name: "NIKUNJ MAHESHWARI", marks: 99 },
+        { name: "HARSHIT KUMAR", marks: 99 }
+      ]
+    },
+    {
+      subject: "English Lang & Lit.",
+      toppers: [{ name: "KIRTI SINGH", marks: 99 }]
+    },
+    {
+      subject: "Hindi Course - B",
+      toppers: [
+        { name: "AJITA SHEKHAR", marks: 98 },
+        { name: "GEYA GAUR", marks: 98 }
+      ]
+    },
+    {
+      subject: "Science",
+      toppers: [{ name: "NIKUNJ MAHESHWARI", marks: 99 }]
+    },
+    {
+      subject: "Sanskrit",
+      toppers: [{ name: "KIRTI SINGH", marks: 99 }]
+    },
+    {
+      subject: "Urdu",
+      toppers: [{ name: "NIKUNJ MAHESHWARI", marks: 96 }]
+    }
+  ];
+
   // ----------------2024-25 DATA (CLASS XII)----------------
   const top3Toppers12th = [
     {
@@ -208,8 +329,6 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
       highlights: ["100/100 in Painting", "94/100 in Biology"]
     }
   ];
-
-  const DEFAULT_AVATAR = "https://static.vecteezy.com/system/resources/thumbnails/003/337/584/small/default-avatar-photo-placeholder-profile-icon-vector.jpg";
 
   // Top 3 Toppers Class X (2024-25)
   const top3Toppers10th = [
@@ -260,7 +379,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
     { label: "Pass Percentage", value: "100%", unit: "Pass Rate", icon: CheckCircle2 },
     { label: "Scored Above 90%", value: "13", unit: "18.1% Students", icon: Star },
     { label: "Scored Above 80%", value: "38", unit: "52.8% Students", icon: Award },
-    { label: "Scored Above 60%", value: "68", unit: "94.4% Students", icon: TrendingUp },
+    { label: "Scored Above 60%", value: "64", unit: "88.9% Students", icon: TrendingUp },
     { label: "School Average", value: "77.7%", unit: "Overall Avg", icon: GraduationCap },
   ];
 
@@ -541,14 +660,14 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
   // Active dataset selection based on session tab and class
   const summaryStatsActive = 
     activeSessionTab === '2025-26'
-      ? (selectedClass === '10th' ? summaryStats10th : summaryStats2025_26_12th)
+      ? (selectedClass === '10th' ? summaryStats2025_26_10th : summaryStats2025_26_12th)
       : activeSessionTab === '2023-24'
       ? (selectedClass === '10th' ? summaryStats2023_24_10th : summaryStats2023_24_12th)
       : summaryStats2024_25;
 
   const top3ToppersActive = 
     activeSessionTab === '2025-26'
-      ? (selectedClass === '10th' ? top3Toppers10th : top3Toppers2025_26_12th)
+      ? (selectedClass === '10th' ? top3Toppers2025_26_10th : top3Toppers2025_26_12th)
       : activeSessionTab === '2023-24'
       ? (selectedClass === '10th' ? top3Toppers2023_24_10th : top3Toppers2023_24_12th)
       : (selectedClass === '10th' ? top3Toppers10th : top3Toppers12th);
@@ -728,14 +847,14 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
 
   const toppersActive = 
     activeSessionTab === '2025-26'
-      ? (selectedClass === '10th' ? toppers10th : toppers2025_26_12th)
+      ? (selectedClass === '10th' ? toppers2025_26_10th : toppers2025_26_12th)
       : activeSessionTab === '2023-24'
       ? (selectedClass === '10th' ? toppers2023_24_10th : toppers2023_24_12th)
       : (selectedClass === '10th' ? toppers10th : toppers12th);
 
   const subjectToppersActive = 
     activeSessionTab === '2025-26'
-      ? (selectedClass === '10th' ? subjectToppers10th : subjectToppers2025_26_12th)
+      ? (selectedClass === '10th' ? subjectToppers2025_26_10th : subjectToppers2025_26_12th)
       : activeSessionTab === '2023-24'
       ? (selectedClass === '10th' ? subjectToppers2023_24_10th : subjectToppers2023_24_12th)
       : (selectedClass === '10th' ? subjectToppers10th : subjectToppers12th);
@@ -964,7 +1083,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                         {top3ToppersActive[currentSlide % top3ToppersActive.length].name}
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">
-                        {selectedClass === '10th' ? 'Class X' : 'Class XII'} • {top3ToppersActive[currentSlide % top3ToppersActive.length].stream}
+                        {selectedClass === '10th' ? 'Class X' : `Class XII • ${top3ToppersActive[currentSlide % top3ToppersActive.length].stream}`}
                       </p>
                     </div>
 
@@ -1017,7 +1136,9 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                         </div>
 
                         <div className="flex-1 min-w-0">
-                          <div className="text-[10px] text-slate-300 font-bold uppercase">{student.streamCode} Stream</div>
+                          <div className="text-[10px] text-slate-300 font-bold uppercase">
+                            {selectedClass === '10th' ? `Rank #${student.rank}` : `${student.streamCode} Stream`}
+                          </div>
                           <div className="text-xs font-bold text-white truncate">{student.name}</div>
                         </div>
 
@@ -1116,7 +1237,7 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                       <tr className="bg-slate-100/60 text-[11px] font-extrabold text-slate-500 uppercase tracking-wider border-b border-slate-200">
                         <th className="py-3 px-4 w-16">Rank</th>
                         <th className="py-3 px-4">Student Name</th>
-                        <th className="py-3 px-4">Stream</th>
+                        {selectedClass !== '10th' && <th className="py-3 px-4">Stream</th>}
                         <th className="py-3 px-4 text-right">Aggregate %</th>
                       </tr>
                     </thead>
@@ -1137,14 +1258,16 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                           <td className="py-3.5 px-4 font-bold text-slate-900">
                             {student.name}
                           </td>
-                          <td className="py-3.5 px-4">
-                            <span className={`px-2.5 py-0.5 rounded-md text-xs font-extrabold border ${getStreamBadgeColor(student.stream)}`}>
-                              {student.stream}
-                            </span>
-                            <span className="text-[11px] text-slate-400 font-normal ml-2 hidden md:inline">
-                              {getStreamFullName(student.stream)}
-                            </span>
-                          </td>
+                          {selectedClass !== '10th' && (
+                            <td className="py-3.5 px-4">
+                              <span className={`px-2.5 py-0.5 rounded-md text-xs font-extrabold border ${getStreamBadgeColor(student.stream)}`}>
+                                {student.stream}
+                              </span>
+                              <span className="text-[11px] text-slate-400 font-normal ml-2 hidden md:inline">
+                                {getStreamFullName(student.stream)}
+                              </span>
+                            </td>
+                          )}
                           <td className="py-3.5 px-4 text-right font-mono font-black text-[#201A5B] text-base">
                             {student.percentage.toFixed(1)}%
                           </td>
@@ -1200,6 +1323,66 @@ export const ResultHighlights: React.FC<ResultHighlightsProps> = ({ activeTab, s
                     </div>
                   ))}
                 </div>
+
+                {/* Comparative Subject Score Progression Table (For Class X 2025-26) */}
+                {activeSessionTab === '2025-26' && selectedClass === '10th' && (
+                  <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden mt-6">
+                    <div className="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <TrendingUp className="w-4 h-4 text-[#f48120]" />
+                        <h4 className="font-extrabold text-slate-900 text-sm">
+                          Subject-Wise Score Progression & Comparison Analysis
+                        </h4>
+                      </div>
+                      <span className="text-[11px] font-semibold text-slate-500">
+                        2024-25 vs First Exam & Second Exam 2025-26
+                      </span>
+                    </div>
+
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-left border-collapse min-w-[620px] text-xs">
+                        <thead>
+                          <tr className="bg-slate-100/70 border-b border-slate-200 text-slate-700 uppercase font-extrabold text-[10px] tracking-wider">
+                            <th className="py-3 px-4" rowSpan={2}>Subject</th>
+                            <th className="py-2 px-3 text-center border-l border-slate-200 bg-slate-100/40" colSpan={2}>2024-25</th>
+                            <th className="py-2 px-3 text-center border-l border-slate-200 bg-orange-50/50 text-[#f48120]" colSpan={2}>First Exam 2025-26</th>
+                            <th className="py-2 px-3 text-center border-l border-slate-200 bg-indigo-50/50 text-[#201A5B]" colSpan={2}>Second Exam 2025-26</th>
+                          </tr>
+                          <tr className="bg-slate-50 border-b border-slate-200 text-slate-500 font-bold text-[10px]">
+                            <th className="py-1.5 px-3 text-center border-l border-slate-200">Highest</th>
+                            <th className="py-1.5 px-3 text-center">Average</th>
+                            <th className="py-1.5 px-3 text-center border-l border-slate-200 text-[#f48120]">Highest</th>
+                            <th className="py-1.5 px-3 text-center text-[#f48120]">Average</th>
+                            <th className="py-1.5 px-3 text-center border-l border-slate-200 text-[#201A5B]">Highest</th>
+                            <th className="py-1.5 px-3 text-center text-[#201A5B]">Average</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {[
+                            { subject: "ENGLISH", h24: 98, avg24: 79.0, h25_1: 99, avg25_1: 88.5, h25_2: 99, avg25_2: 88.9 },
+                            { subject: "HINDI", h24: 97, avg24: 82.6, h25_1: 98, avg25_1: 83.1, h25_2: 98, avg25_2: 84.4 },
+                            { subject: "SANSKRIT", h24: 100, avg24: 80.5, h25_1: 99, avg25_1: 90.6, h25_2: 99, avg25_2: 90.6 },
+                            { subject: "URDU", h24: 88, avg24: 74.0, h25_1: 96, avg25_1: 89.3, h25_2: 96, avg25_2: 89.3 },
+                            { subject: "MATHEMATICS", h24: 99, avg24: 67.1, h25_1: 95, avg25_1: 69.6, h25_2: 100, avg25_2: 74.0 },
+                            { subject: "SCIENCE", h24: 100, avg24: 73.5, h25_1: 99, avg25_1: 74.5, h25_2: 99, avg25_2: 75.3 },
+                            { subject: "SOCIAL SCIENCE", h24: 98, avg24: 77.5, h25_1: 99, avg25_1: 86.5, h25_2: 99, avg25_2: 86.5 },
+                            { subject: "INFORMATION TECHNOLOGY", h24: 100, avg24: 87.3, h25_1: 99, avg25_1: 88.4, h25_2: 99, avg25_2: 88.4 },
+                          ].map((row, rIdx) => (
+                            <tr key={rIdx} className="hover:bg-slate-50/80 transition-colors">
+                              <td className="py-2.5 px-4 font-bold text-slate-800">{row.subject}</td>
+                              <td className="py-2.5 px-3 text-center border-l border-slate-100 font-mono font-semibold text-slate-700">{row.h24}</td>
+                              <td className="py-2.5 px-3 text-center font-mono text-slate-600">{row.avg24}</td>
+                              <td className="py-2.5 px-3 text-center border-l border-slate-100 font-mono font-bold text-[#f48120] bg-orange-50/20">{row.h25_1}</td>
+                              <td className="py-2.5 px-3 text-center font-mono text-slate-700 bg-orange-50/20">{row.avg25_1}</td>
+                              <td className="py-2.5 px-3 text-center border-l border-slate-100 font-mono font-bold text-[#201A5B] bg-indigo-50/20">{row.h25_2}</td>
+                              <td className="py-2.5 px-3 text-center font-mono font-extrabold text-[#201A5B] bg-indigo-50/20">{row.avg25_2}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
 
