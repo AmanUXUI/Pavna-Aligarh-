@@ -161,17 +161,17 @@ export const FacultyPage: React.FC = () => {
       name: "Mother Teacher",
       description: "Providing gentle guidance, foundational care, and holistic early childhood education.",
       members: [
-        { name: "Akanksha Jain", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/cxc5u1" },
-        { name: "Neeru Gupta", designation: "Primary Educator", image: "https://imgh.in/host/94y26e" },
-        { name: "Kriti Dwivedi", designation: "Primary Educator", image: "https://imgh.in/host/tvi00w" },
-        { name: "Shalini Singh", designation: "Primary Educator", image: "https://imgh.in/host/gglw9a" },
-        { name: "Himanshi Sharma", designation: "Primary Educator", image: "https://imgh.in/host/t90kef" },
-        { name: "Priyanshi Mahawar", designation: "Primary Educator", image: "https://imgh.in/host/z52cd0" },
-        { name: "Nisha Sharma", designation: "Primary Educator", image: "https://imgh.in/host/35hf22" },
-        { name: "Vandana Vermani", designation: "Primary Educator", image: "https://imgh.in/host/wdy6wd" },
-        { name: "Ms. Pallavi Mudgal", designation: "Primary Educator", image: "https://imgh.in/host/mdgirq" },
-        { name: "Ms. Radhika Uppal", designation: "Primary Educator", image: "https://imgh.in/host/wvodsw" },
-        { name: "Ms. Yagya Vashishtha", designation: "Primary Educator", image: "https://imgh.in/host/vusgwk" }
+        { name: "Akanksha Jain", isHOD: true, designation: "Head of Department (HOD)", image: "https://imgh.in/host/vqlkl3" },
+        { name: "Neeru Gupta", designation: "Primary Educator", image: "https://imgh.in/host/1cmsrn" },
+        { name: "Kriti Dwivedi", designation: "Primary Educator", image: "https://imgh.in/host/asw0c8" },
+        { name: "Shalini Singh", designation: "Primary Educator", image: "https://imgh.in/host/0lndvw" },
+        { name: "Himanshi Sharma", designation: "Primary Educator", image: "https://imgh.in/host/ls1r2x" },
+        { name: "Priyanshi Mahawar", designation: "Primary Educator", image: "https://imgh.in/host/5np6sa" },
+        { name: "Nisha Sharma", designation: "Primary Educator", image: "https://imgh.in/host/q9ft6q" },
+        { name: "Vandana Vermani", designation: "Primary Educator", image: "https://imgh.in/host/agc68r" },
+        { name: "Ms. Pallavi Mudgal", designation: "Primary Educator", image: "https://imgh.in/host/xh2syc" },
+        { name: "Ms. Radhika Uppal", designation: "Primary Educator", image: "https://imgh.in/host/es9nhy" },
+        { name: "Ms. Yagya Vashishtha", designation: "Primary Educator", image: "https://imgh.in/host/6pzdb2" }
       ]
     },
     {
